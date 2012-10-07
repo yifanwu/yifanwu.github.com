@@ -1,0 +1,149 @@
+@blue: #00214D;
+@red: #CF142B;
+@white: #FFF;
+@black: #000;
+@text_c:#401a28;
+@gray_c:#333333;
+@dark:#222222;
+@light:#f5f5f5;
+@radius: 5px;
+@link_c: #4B308D;
+@link_v_c:#54446C;
+@link_h_c:#9932CC;
+@link_a_c:#7851A9;
+
+body {
+  font-family:Georgia;
+  background:@light;
+  padding:5%;
+  //margin:7%;
+  margin: 3em;
+  margin-right:5%;
+  border:@dark;
+  border-width:100%;
+  h1{
+    //padding-top: 2%;
+    padding-bottom: 2%;
+    border-bottom:1px solid @gray_c;
+    //border-top:1px solid @gray_c;        
+  }
+  p {
+    font-size:90%;
+  }
+}
+
+.inner{
+    margin:0;
+    text-align:left;
+    width:90%;
+}
+
+.rightcolumn{
+    padding:70%
+    width:30%;
+    text-align:right;
+}
+
+.column(@num: 4){
+  margin-top:3px;
+  width:(100%/@num);
+  float:left;
+}
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.fourcolumn {
+    .column(4);   
+}
+
+.list {
+  margin-top:7px;
+  list-style-type: none;
+  li{
+    font-size:100%;
+    padding-bottom:5%;
+  }    
+}
+
+a:link {
+    font-size:100%;
+    text-decoration:none;
+    color: @link_c;
+}
+
+a:visited {
+    color: @link_v_c;
+}
+a:hover {
+    color: @link_h_c;
+}
+a:active {
+    color: @link_a_c;
+}
+.bar (@col: 4){
+    //position:absolute;  
+    width: 100%;
+    //float:center;
+    height:25px;
+    float: left;
+	margin: 0 auto;
+	padding-top: 2em;
+	list-style: none; 
+    text-align:center;
+    ul {  
+        padding: 0;  
+        margin: 0;
+        li {
+            float: center; 
+            display:inline; 
+            text-decoration: none;  
+            display: inline-block;  
+            //float: left;  
+            width: (90%/@col);  
+            height: 45px;  
+            text-align: center;  
+            line-height: 300%;  
+            border-bottom:1px solid @gray_c;
+            border-top:1px solid @gray_c;
+            border-width: 15%;  
+        }
+    }          
+} 
+
+.bar4 {
+ .bar(4);   
+}
+
+.bar5 {
+ .bar(5);   
+}
+
+.section {
+  position:relative;
+  //margin-bottom:.5em;
+  //padding-bottom:1em;
+  border-bottom:1px solid #cccccc;
+  
+  h2 {
+      font-size:130%;
+  }
+  h4 {
+    font-size:100%;
+    position:absolute;
+    top:0.35em;
+    bottom:0.35em;
+    right:0;
+  }
+  h3 {
+    font-size:100%;      
+  }
+  p {
+    font-size:85%;
+    margin:0.75em 0 3em 0;
+  }
+}
+
