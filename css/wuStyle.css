@@ -1,5 +1,5 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
-body{font-family:Georgia;background:#f5f5f5;padding:5%;margin:3em;margin-right:5%;border:#222222;border-width:100%;}body h1{padding-bottom:2%;border-bottom:1px solid #333333;}
+body{font-family:Georgia;background:#f5f5f5;padding:5%;margin:3em;margin-right:5%;border:#222222;border-width:100%;}body h1{padding-top:2%;padding-bottom:2%;border-bottom:1px solid #333333;font-size:150%;}
 body p{font-size:90%;}
 .inner{margin:0;text-align:left;width:90%;}
 .rightcolumn{padding:70% width:30%;text-align:right;}
@@ -15,3 +15,4 @@ a:active{color:#7851a9;}
 .section h4{font-size:100%;position:absolute;top:0.35em;bottom:0.35em;right:0;}
 .section h3{font-size:100%;}
 .section p{font-size:85%;margin:0.75em 0 3em 0;}
+#ft{margin-bottom:2em;padding:1.5em 0 1.5em 0;font-size:92%;border-top:1px solid #cccccc;border-bottom:1px solid #cccccc;text-align:center;}#ft p{margin-bottom:0;text-align:center;}
