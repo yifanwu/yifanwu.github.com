@@ -1,0 +1,34 @@
+#body {
+	background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #cde6f9),color-stop(1, #81a8cb)); /* Safari & Chrome */	   
+	background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%,800, from(#cde6f9), to(#6191bf));
+
+}
+
+
+#radial-gradient {
+  background-image: -webkit-gradient(radial, 45px 45px, 0, 45px 45px, 30, color-stop(33.333%, #00ffff), color-stop(100%, #1e90ff));
+  background-image: -webkit-radial-gradient(45px 45px, #00ffff 10px, #1e90ff 30px);
+  background-image: -moz-radial-gradient(45px 45px, #00ffff 10px, #1e90ff 30px);
+  background-image: -o-radial-gradient(45px 45px, #00ffff 10px, #1e90ff 30px);
+  background-image: radial-gradient(45px 45px, #00ffff 10px, #1e90ff 30px);
+}
+ 
+
+
+.page{
+
+	background-color:#269;
+	background-image: linear-gradient(white 2px, transparent 2px),
+	linear-gradient(90deg, white 2px, transparent 2px),
+	linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+	linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+	background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+
+}
+
+.photobanner {
+    height: 233px;
+	width: 3550px;
+	margin-bottom: 80px;
+}
