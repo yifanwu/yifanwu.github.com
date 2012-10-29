@@ -20,6 +20,19 @@
     return s.parentNode.insertBefore(ga, s);
   })();
 
+  $(document).ready(function() {
+    $(".nav-text").hide();
+    $(".nav-headline").hover((function() {
+      var text;
+      text = $($(this).siblings()[0]).html();
+      $("#nav-current-text").hide().html(text).fadeIn("medium");
+      return window.scrollTo(0, 9999);
+    }), function() {});
+    return $("#title").mouseover(function() {
+      return $("#nav-current-text").html("");
+    });
+  });
+
   ungray = function(id) {
     return $(id).animate({
       opacity: 1.0
@@ -53,7 +66,7 @@
 
   books = ["#intothewild", "#1984", "#blink", "#thecatcher"];
 
-  photos = ["#charles", "#harvard", "#seattle", "#india", "#mexico", "#newbedford"];
+  photos = ["#charles", "#harvard", "#seattle", "#india", "#mexico", "#newbedford", "#parks", "#uk"];
 
   $(document).ready(function() {
     /* traveling
@@ -87,6 +100,12 @@
     });
     $("#mexico").click(function() {
       return reveal("#mexico", photos);
+    });
+    $("#parks").click(function() {
+      return reveal("#parks", photos);
+    });
+    $("#uk").click(function() {
+      return reveal("#uk", photos);
     });
     /* books
     */

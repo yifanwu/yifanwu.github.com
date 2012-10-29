@@ -25,7 +25,6 @@ $(document).ready ->
     $("#nav-current-text").html ""
 
 
-
 #graying
 ungray = (id) ->
   $(id).animate
@@ -52,7 +51,7 @@ countries = ["#america", "#china", "#india", "#mexico", "#uk","#taiwan"]
 
 books = ["#intothewild", "#1984", "#blink", "#thecatcher"]   
 
-photos = ["#charles","#harvard","#seattle","#india","#mexico","#newbedford"]
+photos = ["#charles","#harvard","#seattle","#india","#mexico","#newbedford","#parks","#uk"]
 
 #allEle = countries.concat books
 #allEle = allEle.merge countries books photos
@@ -83,8 +82,11 @@ $(document).ready ->
     reveal "#india", photos
   $("#mexico").click ->
     reveal "#mexico", photos
-
-
+  $("#parks").click ->
+    reveal "#parks", photos
+  $("#uk").click ->
+    reveal "#uk", photos
+  
   ### books ###
   
   $("#intothewild").click ->
