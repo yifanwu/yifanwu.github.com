@@ -1,7 +1,11 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
-body{font-family:Georgia;background-color:#f5f5f5;padding:5%;margin:3em;margin-right:5%;border:#222222;border-width:100%;background-position:top center;background-repeat:no-repeat;background-size:cover;-moz-background-size:cover;-webkit-background-size:cover;}@media only all and (max-width:640px) and (max-height:426px){body body{background-size:640px 426px;-moz-background-size:640px 426px;-webkit-background-size:640px 426px;}}@font-face{font-family:'WalkwaySemiBoldRegular';src:url('Walkway_SemiBold-webfont.eot');font-weight:normal;font-style:normal;}body h1{padding-top:2%;padding-bottom:2%;border-bottom:1px solid #333333;font-size:200%;font-family:Papyrus, fantasy;}
-body p{font-size:90%;font-family:"Book Antiqua",Palatino;}
-.page{width:90%;overflow:auto;margin:1em 2%;border-radius:15px;background-color:rgba(255, 255, 255, 0.7);margin-top:30px;margin-bottom:20px;border:1px solid white;-moz-border-radius:15px;padding:2em;}.page h2,.page h3,.page h4{font-family:Papyrus, fantasy;}
+body{font-family:Monaco;background-color:#f5f5f5;padding:5%;margin:3em;margin-right:5%;
+    border:#222222;border-width:100%;background-position:top center;background-repeat:no-repeat;
+    background-size:cover;-moz-background-size:cover;-webkit-background-size:cover;}
+    @media only all and (max-width:640px) and (max-height:426px){body body{background-size:640px 426px;-moz-background-size:640px 426px;
+        -webkit-background-size:640px 426px;}};font-weight:normal;font-style:normal;}body h1{padding-top:2%;padding-bottom:2%;border-bottom:1px solid #333333;font-size:200%;font-family:Monaco;}
+body p{font-size:90%;font-family:Monaco;}
+.page{width:90%;overflow:auto;margin:1em 2%;border-radius:15px;background-color:rgba(255, 255, 255, 0.7);margin-top:30px;margin-bottom:20px;border:1px solid white;-moz-border-radius:15px;padding:2em;}.page h2,.page h3,.page h4{font-family:Monaco;}
 .inner{margin:0;text-align:left;width:90%;}
 .rightcolumn{padding:70% width:30%;text-align:right;}
 .fourcolumn{margin-top:3px;width:25%;float:left;display:block;margin-bottom:3px;}
@@ -18,9 +22,9 @@ ul{padding:0;margin:0;}ul li{display:inline;text-decoration:none;display:inline-
 .bar4{position:relative;width:100%;float:left;margin:2em auto;padding:0 0;list-style:none;text-align:center;display:block;clear:both;}.bar4 ul li{width:25%;border-bottom:1px solid #333333;border-top:1px solid #333333;height:45px;}
 .bar5{position:relative;width:100%;float:left;margin:2em auto;padding:0 0;list-style:none;text-align:center;display:block;clear:both;}.bar5 ul li{width:20%;border-bottom:1px solid #333333;border-top:1px solid #333333;height:45px;}
 .quote{width:80%;padding:0.5em 5% 0.5em 10%;font-style:italic;font-size:90%;}.quote .source{float:right;}
-.section{position:relative;padding-bottom:1em;border-bottom:1px solid #cccccc;}.section h2{font-size:120%;font-family:Papyrus, fantasy;}
+.section{position:relative;padding-bottom:1em;border-bottom:1px solid #cccccc;}.section h2{font-size:120%;font-family:Monaco;}
 .section h4{font-size:100%;position:absolute;top:0.35em;bottom:0.35em;right:0;}
-.section h3{font-size:90%;font-family:Papyrus, fantasy;}
+.section h3{font-size:90%;font-family:Monaco;}
 .section p{font-size:85%;margin:0;}
 .wrap{width:90%;position:relative;}.wrap .left{width:42%;float:left;padding-right:6%;}
 .wrap .right{float:auto;}
