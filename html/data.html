@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>data</title>
+    <link href="../css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <header>
+      <img src="https://lh5.googleusercontent.com/-ihZfjQLdllY/UONpjlfzdWI/AAAAAAAAJmw/LIR-1gpF5CM/h120/harvarfml.png" id="h_img" width="700">
+      <div id="h_bar">
+        <h1>yifan's mini data adventures</h1>
+        <div id="sidebar">
+          <a href="#mediacloud" id="d_mc">MediaCloud</a><br>
+          <a href="#harvardfml" id="d_fml">HarvardFML</a><br>
+          <a href="#isawuharvard" id="d_isu">ISawYouHarvard</a><br>
+        </div>
+      </div>    
+    </header>
+
+    <div id="sidecolumn">
+    <br>      
+    <div id="mediacloud">
+      <h1>Mediacloud</h1>
+      <p>
+        This was a final project with <a href="http://people.seas.harvard.edu/~eagapie/">Elena</a>for <a href="http://www.eecs.harvard.edu/~michaelm/CS222/syllabus.html">CS 222, <i>Algorithms at the End of the Wire</i></a>.
+      </p>
+      <p>
+        Social media is arguably the most important new media of the century. Grassroots opinion leaders propagate a wealth of information over a dynamic network. Our paper analysed the dynamics of the network based on link structures for different types of media sources. We identified the most influencial set of sources using PageRank and HITS and gained more insights into the effectiveness of graph algorithms applied on a real data set of news and blogs articles. Focusing on the <a href="http://mediacloud.org">Mediacloud</a> data from the <a href="http://cyber.law.harvard.edu">Berkman Center</a>, we analyze the characteristics of the complex network, as a result of the influence of different media sources, and present suggestions to improve the design of the data API for better analysis.
+      </p>
+      <p>
+        Our processing procedure were as follows:
+      </p>
+      <img src="https://lh3.googleusercontent.com/-KJWCPEtw3m8/UONibW8GFXI/AAAAAAAAJlw/4WpZ-UsoNXM/s800/processing.png" width="500px" alt="processing">
+      <p>
+        Here are some snippets of the graphs I plotted (haven't asked Elena for permission for posting hers yet).
+      </p>
+      <p>Degree Histagram (log log plot), which turns out not to change too much over time</p>
+      <img src="https://lh4.googleusercontent.com/-DglKPvTdv5Y/UONibYCTIFI/AAAAAAAAJl0/r44HIR0wLKM/s800/degree_histogram_june.png" width="500px"alt="degree_histagram">
+      <p>
+        And the connections visualized on a media level
+      </p>
+      <img src="https://lh4.googleusercontent.com/-3b_oeZmo-FI/UONibfFvgeI/AAAAAAAAJls/dEV_6ekD6v4/s800/gcc_connect_july.png", width="500px">
+    </div>
+
+    <div id="harvardfml">
+      <br>      
+      <h1>Harvard FML</h1>
+      <p>
+        I scraped the FML posts from <a href="http://harvardfml.com/">HarvardFML</a> (with tumblr as backend), and tried to run <a href="http://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">LDA</a> with the posts but didn't get great results since the posts were too short. <i>Sidenote:</i> I got to go to David Blei's talk at SEAS and it was fun.
+      </p>
+      <p>
+        The topics were:<br>
+        girl,love,guy,class,time,day,guys,roommate,girlfriend,sleep<br>
+        girl,time,night,guy,hours,people,roommate,sex,past<br>
+        girl,day,life,hot,hours,guy,facebook,people,time,talk<br>
+        friends,boyfriend,feel,home,told,sex,school,time,girl,college<br>
+      </p>
+      <p>I made a <a href="http://wordle.net">wordle</a> instead and it was pretty good
+      </p>
+      <p>one just from the topics</p>
+      <img src="https://lh6.googleusercontent.com/-DdiCOsWhv1Y/UONm0TUBUrI/AAAAAAAAJmQ/B2zBwqQBfsc/s128/fml_wordcloud.png" width="500px">
+      <p>and one from the whole text</p>
+      <img src="https://lh5.googleusercontent.com/-ihZfjQLdllY/UONpjlfzdWI/AAAAAAAAJmw/LIR-1gpF5CM/h120/harvarfml.png" width="500px">
+    </div>
+    
+    <div id="isawuharvard">
+      <br>      
+      <h1>I Saw You Harvard</h1>
+      <p>
+        I haven't quite decided what to do with this data yet; it's very similar to HarvardFML.
+      </p>
+      <p>
+        I'll start with a word cloud (lame, I know)
+      </p>
+      <img src="https://lh5.googleusercontent.com/-7T5OMpwLdwk/UONpjioz74I/AAAAAAAAJms/Hm3QgyazdYE/h120/isawyouharvard.png" width="500px">
+    </div>
+
+  </body>
+
+  <script type="text/javascript" src="../js/jquery.min.js" charset="utf-8" ></script>
+  <script type="text/javascript" src="../js/custom.js" charset="utf-8"></script>  
+</html>  
+  

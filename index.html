@@ -10,24 +10,31 @@
 
   </head>
 
-  <body> 
-    <h1><center>[ yifan wu ]</center></h1>
-    
-    <center><div id="fadein">
-      <p>i'm a junior at harvard college studying computer science </p>
-       
-      <p>i like to think about why things are the way they are and write them on my</p>
-      <a href="http://blog.yifanwu.net">blog</a>
-      <p>and how i could help by making stuff</p>
-      <a href="http://www.behance.net/yifanwu">projects</a>
-      <p>just in case you might be interested in hiring or working with me</p>
-    </div>
-      <a href="#resume" id="resume">resume</a></p>
+  <body>
+    <center>      
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <h1>[ yifan wu ]<span style="font-size:12px"><a href="html/cn.html"> cn</a></span></h1>
+      <div id="fadein">
+        <p>i'm a junior at harvard college studying computer science </p>
+        <p>i like to think about why things are the way they are and write them on my</p>
+        <a href="http://blog.yifanwu.net">blog</a>
+        <p>and contribute via</p>
+        <a href="#projects_details" id="projects">projects</a>
+        <p>just in case you might be interested in hiring or working with me, do checkout my</p>
+        <a href="#resume_details" id="resume">resume</a></p>
+        <p>and to put things in context:</p>
+        <a href="#photo_details" id="photo">photo</a></p>      
+      </div><!--fadein-->
     </center>
     <br>
 
     <div id="slideout_r">
-      <img src="img/arrow_r.png" alt="Feedback" width="50"/>
+      <img src="img/arrow_r.png" alt="social" width="50"/>
       <div id="slideout_r_inner">
         <!--Instagram Rendering!-->
         <div class="contact_buttons">
@@ -37,40 +44,62 @@
           <a href="http://blog.yifanwu.net/">o</a>
           <a href="https://github.com/yifanwu">-</a>
           <a href="http://pinterest.com/yifanwu/">&</a>
-
         </div>
       </div>
-    </div>
+    </div><!--slideout_r-->
+    
+    <center><img id="photo_details" src="img/me.jpg" width="500px" style="display:none"></center>
+    
+    <div id="projects_details" style="display:none">
+      <center><p>
+        i like to make things but i've just gotten started
+        <br>
+        <br>
+        (might be better to come back in a few months)
+      </p>
+      <br>
       
+      </center>
+      <div class="column3" align="center">
+        <a href="https://github.com/yifanwu">coding</a>
+      </div>   
+      <div class="column3"align="center">
+        <a href="http://www.behance.net/yifanwu">photo(graphy)</a>
+      </div>   
+      <div class="column3"align="center">
+        <a href="http://www.indiegogo.com/yifan1030">ideas</a>
+      </div>
+    </div>
+
     <div id="resume_details" style="display:none">
-    <div class="page">
-    <h2><center>Education</center></h2>
-            
+      <div class="page">
+      <h2><cjavascript:void(0);enter>Education</center></h2>
+              
+        <div class="section">
+          <h2>Harvard College'14</h2>
+          <h3>Candidate for B.A. in Computer Science, <div id="gpa" style="display: inline">GPA 3.6</div><div id="gpa_comment" style="display:none;opacity: 0.5;"> it's low because i push my limits and take hard classes...</div></h3>
+          <h4>Cambridge, MA</h4>
+          <p>
+            I'm very excited about <a href="html/data.html">data</a>, artificial intelligence and its applications in knowledge discover in the social sciences.
+          </p>
+        </div><!--section-->
+
       <div class="section">
-        <h2>Harvard College'14</h2>
-        <h3>Candidate for B.A. in Computer Science, GPA 3.6 </h3>
-        <h4>Cambridge, MA</h4>
-        <p>
-          I'm very excited about big data/artificial intelligence and its applications in knowledge discover in business and public policies.
-        </p>
+        <h2>Cambridge University, Pembroke King’s Programme</h2>
+        <h3>Summer 2011</h3>
+        <h4>Cambridge, UK</h4>
+        <p>Courses on European history, espionage history, and moral philosophy for personal enrichment. More information could be found <a href="http://www.pem.cam.ac.uk/ip/pkp/">here</a>.</p>
       </div><!--section-->
 
-    <div class="section">
-      <h2>Cambridge University, Pembroke King’s Programme</h2>
-      <h3>Summer 2011</h3>
-      <h4>Cambridge, UK</h4>
-      <p>Courses on European history, espionage history, and moral philosophy for personal enrichment. More information could be found <a href="http://www.pem.cam.ac.uk/ip/pkp/">here</a>.</p>
-    </div><!--section-->
+      <div class="section">
+        <h2>Beijing Chen Jing Lun High School'10</h2>
+        <h3>Valedictorian</h3>
+        <h4>Beijing, China</h4>
+        <p>NHEEE 650 (+30), admitted to Tsinghua University. SAT 2270 (Math 800). AMC 115.5, AIME 8.</p>
+      </div><!--section-->
+                
 
-    <div class="section">
-      <h2>Beijing Chen Jing Lun High School'10</h2>
-      <h3>Valedictorian</h3>
-      <h4>Beijing, China</h4>
-      <p>NHEEE 650 (+30), admitted to Tsinghua University. SAT 2270 (Math 800). AMC 115.5, AIME 8.</p>
-    </div><!--section-->
-              
-
-    <h2><center>Professional Experience</center></h2>
+      <h2><center>Professional Experience</center></h2>
       <div class="section">
         <h2>Microsoft</h2>          
         <h3>Explorer Intern @ .Net Servicing Team</h3>
@@ -99,8 +128,7 @@
         <h2><a href="http://www.adchina.com/en/us/">AdChina</a></h2>
         <h3>Business Analyst (Field Project)</h3>
         <h4>10/2011-12/2011</h4>
-        <p>Researched overall Chinese online advertisement market, including development trends, competitive landscape,
-evolving value chain, culture factors, and best practices, and ultimately created strategies to expand the market share.</p>
+        <p>Researched overall Chinese online advertisement market, including development trends, competitive landscape, evolving value chain, culture factors, and best practices, and ultimately created strategies to expand the market share.</p>
       </div>
 
       <div class="section">
@@ -156,15 +184,32 @@ evolving value chain, culture factors, and best practices, and ultimately create
       <center><h2>Skills</h2></center>
 
       <div class="section">
-          <h5>Comp. Sci.:</h5><p>have taken courses on web dev., software development and analysis, computer systems programming, machine organization, and performance tuning, proficient with C, C#, OCaml, and PHP. </p>
-          <h5>Math/Stat: </h5><p>probability theory, linear algebra, multivariable differential calculus, basic real analysis</p>
-          <h5>Economics:</h5><p>intermediate micro & macro economics, game theory</p> 
+        <div class="fourcolumn">
+          <h5>Comp. Sci.:</h5>
+          <p>have taken courses on web dev., software development and analysis, computer systems programming, machine organization, and performance tuning, proficient with C, C#, OCaml, and PHP. </p>
+        </div>
+        <div class="fourcolumn">
+        
+          <h5>Math/Stat: </h5>
+          <p>probability theory, linear algebra, multivariable differential calculus, basic real analysis</p>
+        </div>
+        
+        <div class="fourcolumn">
+        
+          <h5>Economics:</h5><p>intermediate micro & macro economics, game theory</p>
+        </div>
+        
+        <div class="fourcolumn">
+           
           <h5>Language: </h5><p>Native Chinese-Mandarin speaker</p>
           <h5>Business: </h5><p>Harvard Business School course on innovation and entrepreneurship, MIT Founder's Journey</p>
-
+        </div>
+        
       </div><!--section-->
 
-    </div>
+      </div><!--page-->
+    </div><!--resume_details-->
+
   </body>
 
   <script type="text/javascript" src="js/jquery.min.js" charset="utf-8" ></script>
