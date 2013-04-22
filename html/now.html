@@ -2,51 +2,52 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Tweet! Put Twitter on your site with this simple, unobtrusive jQuery widget</title>
-  <link href="../css/jquery.tweet.css" rel="stylesheet"/>
+  <title>Yifan Right Now</title>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-  <script src="../js/jquery.tweet.js" charset="utf-8"></script>
-  <script type="text/javascript">
-    function randomString(length) {
-      var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
-      var str = '';
-      for (var i = 0; i < length; i++) {
-        str += chars[Math.floor(Math.random() * chars.length)];
-      }
-      return str;
-    }
-    var rnd = randomString(8);
-
-    jQuery(function($) {
-      $(".rnd").replaceWith(rnd);
-
-
-      $(".demo .code").hide().each(function(i,e){
-        $(e).before($('<a class="show-code" href="#">Show code &raquo;</a>').
-                      click(function(ev) {
-                        $(e).slideToggle();
-                        $(this).hide();
-                        ev.preventDefault();
-                      }));
-
-      }).each(function(i, e){ eval($(e).text()); });
-    });
-
-    jQuery(function($){
-        $("#favorites").tweet({
-          avatar_size: 32,
-          count: 3,
-          username: "yifanwu",
-          favorites: true,
-          loading_text: "loading list..."
-        }).bind("loaded",function(){$(this).find("a").attr("target","_blank");});
-      });
-
-  </script>
+  <link href="../css/style.css" rel="stylesheet" />
 </head>
 <body>
-      <p><a name="6" class="num">#6</a> - Displaying the user sanityinc's favorite tweets, and using a handler
-     for tweet's "loaded" event to make links open in a new window:</p>
-    <div id="favorites" class="query"></div>
+
+<center>
+</br>
+</br>
+</br>
+</br>
+<h2>Search Yifan's Blog</h2>
+</br>
+</br>
+</br>
+</br>
+    <script>
+  (function() {
+    var cx = '008781354986186978047:p4zwgje6iuk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+
+</br>
+</br>
+<h2>Yifan's Tweets</h2>
+</br>
+</br>
+
+  <a class="twitter-timeline" href="https://twitter.com/YifanWu" data-widget-id="326188174462304256">Tweets by @YifanWu</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+</br>
+</br>
+</br>
+</br>
+
+</center>
+
   </body>
   </html>

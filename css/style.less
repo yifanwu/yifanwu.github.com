@@ -9,6 +9,13 @@
 @myfont:Georgia;
 
 @font-face {
+  font-family: 'xkcd';
+  src: url('../fonts/xkcd.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Socialico';
   src: url('../fonts/socialico-webfont.eot');
   src: url('../fonts/socialico-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/socialico-webfont.woff') format('woff'), url('../fonts/socialico-webfont.ttf') format('truetype'), url('../fonts/socialico-webfont.svg#socialicoregular') format('svg');
@@ -36,7 +43,7 @@ body {
     font-family: @myfont;
   }  
   p {
-    font-size:90%;
+    font-size:110%;
     font-family: "Book Antiqua", Palatino;
   }
 }
@@ -329,6 +336,12 @@ ul {
 }
 #slideout_r:hover #slideout_r_inner {
   right: 0;
+}
+
+.comic p {
+  font-family: "xkcd";
+  font-size: 50px;
+     
 }
 
 .contact_buttons a {
