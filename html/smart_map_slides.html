@@ -37,50 +37,98 @@
 </section>
 
 <section>
-<h3> Need to know the right keywords</h3>
-<h3>Only reads the first page</h3>
-<h3>Don't see the key concepts</h3>
+<h4>Need to know the right keywords</h4>
+<h4>Only reads the first page</h4>
+<h4>Don't see the key concepts</h4>
+<aside>But again, the search is the most effective tool currently available. Smart Search is getting closer to </aside>
 </section>
 
 <section class="chapter">
 <h1>Solution</h1>
 <h2>Summarization, Topic Discovery, and Graphs</h2>
+<aside>Solution procudure eliminates repeated work</aside>
 </section>
 
-<section>
-<h1 class="double">Visualizing <span class="purple">Search</span> with <span class="green">Graph</span></h1>
-<h2>D3 Force Graph</h2>
-</section>
-
-
-<section>
-<h1 class="double">Visualizing <span class="purple">Search</span> with <span class="green">Graph</span></h1>
-<h2>D3 Force Graph</h2>
-</section>
 
 <section>
 <h1><span class="purple">Idea</span> ↦ <span class="green">Implementation</span></h1>
-<h2>A lot more corner cases and bugs</h2>
+<h2>A lot more corner cases and bugs: simplified the process a lot</h2>
 </section>
 
 <section>
-<h1><span class="purple">Data</span>-Driven <span class="green">Documents</span></h1>
-<h2>The name “D3” refers to the <a href="http://www.w3.org/TR/dom/">W3C <span class="green">Document</span> Object Model</a>.</h2>
+<h3>Steps </h3>
+<h4>Run LDA to get topics</h4>
+<h4>Find the sentences with the most topic hits</h4>
+<h4>Also note down the documents with the most topic hits</h4>
+<aside>Did not incorporate in search ranking because they are all pretty important on the first page</aside>
+</section>
+
+
+<section>
+<h1>Summarizing <span class="purple">Search</span></h1>
+<h2>LDA, Frequency, and Cosine Similarity</h2>
 </section>
 
 <section>
-<h1 class="green">Web Standards</h1>
-<h2>There are myriad free resources for learning standards.</h2>
-<aside>“Learning D3” is largely learning web standards. Fortunately, there are lots of resources for learning standards!</aside>
+<h3></h3>
+<h4></h4>
+<h4></h4>
 </section>
 
+<section>
+<h1 class="double">Visualizing <span class="purple">Search</span> with <span class="green">Graph</span></h1>
+<h2>D3 Force Graph</h2>
+</section>
 
+<section>
+<h3>Steps</h3>
+<h4>- Distance measure based on topic words vector</h4>
+<h4>- Get the document with the most keywords as key documents</h4>
+<h4>- From the key documents find the closest set of documents</h4>
+</section>
 
+<section>
+<h1 class="double">Visualizing <span class="purple">Search</span> with <span class="green">World Cloud</span></h1>
+<h2>D3 Force Graph</h2>
+</section>
 
+<section>
+<h3>Issues</h3>
+<h4>- Show very common key words first, and unfortunately not very enlightening</h4>
+<h4>--> Need to parse out the keywords as topics </h4>
+<h4>- Room for improvement compared to results like <a href="http://www.jasondavies.com/wordcloud/#http%3A%2F%2Fsearch.twitter.com%2Fsearch.json%3Frpp%3D100%26q%3D%7Bword%7D=tooth%20ache">this</a></h4>
+</section>
+
+<section class="chapter">
+<h1>Demo</h1>
+<h2>Runs slowly and is stil a bit buggy</h2>
+<aside>Turns out that this is really hard to do well on!</aside>
+</section>
+
+<section>
+<h1 class="green">TODOs!</h1>
+<h2>Tune, Debug and Map Wikipedia</h2>
+<aside>Hopefully in time for the project due time.</aside>
+</section>
+
+<section>
+<h4>Motivaition</h4>
+<h4>- Croawling the URLs are slow</h4>
+<h4>- The algorithm is slow</h4>
+<h4>- Cannot do many more documents</h4>
+</section>
+
+<section>
+<h4>Strategy</h4>
+<h4>- Start with the central key word, e.g. foot<h4>
+<h4>- Basic regex on the link key words<h4>
+<h4>- Run the documents through the algorithm and generate summaries and maps<h4>
+<aside>No more wordle: other people do a much better job</aside>
+</section>
 
 <section class="chapter">
 <h2><a href="http://bost.ocks.org/mike/">Yifan Wu</a><div class="grey"></div>Thank you for reading!</h2>
-<aside>Please let me know if you have any inputs or suggestions!</a>.</aside>
+<aside>Please let me know if you have any inputs or suggestions!</aside>
 </section>
 
 <script src="http://mbostock.github.com/stack/stack.v0.js"></script>
