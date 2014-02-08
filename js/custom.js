@@ -16,6 +16,10 @@ $(document).ready(function(){
             $("#h_bar").css('opacity',1);
             $("#h_img").css('opacity',0);                        
         }
+        var bottom = $(document).height() - $(window).height() - $(window).scrollTop();
+        if (bottom < 100) {
+            $("#classList").addClass('visible');
+        }
     });
 
     $(".title_bracket").hover(function() {
@@ -66,7 +70,6 @@ $(document).ready(function(){
         proj = 1;
     })
 
-
     $(".gpa").hover(function(){
         $("#gpa_comment").css('display', 'inline').delay(2000).fadeOut();
     })
@@ -84,6 +87,7 @@ $(document).ready(function(){
     $("#d_isu").click(function() {
         $("#isawuharvard").show();
     })
+
 
 
 });

@@ -405,4 +405,23 @@ ul {
     }
 }
 
+.fadeTransition {
+    & > .visible {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: opacity 2s linear;
+        -moz-transition: opacity 2s linear;
+        -o-transition: opacity 2s linear;
+        transition: opacity 2s linear;
+    }
+    & > .hidden {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: visibility 0s 2s, opacity 2s linear;
+        -moz-transition: visibility 0s 2s, opacity 2s linear;
+        -o-transition: visibility 0s 2s, opacity 2s linear;
+        transition: visibility 0s 2s, opacity 2s linear;
+    }
+}
+
 
