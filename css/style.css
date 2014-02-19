@@ -171,7 +171,7 @@ ul li {
   font-family: Georgia;
 }
 .section p {
-  font-size: 80%;
+  font-size: 95%;
   margin: 0;
 }
 .section a {
@@ -369,7 +369,13 @@ ul li {
 .page h4 {
   font-family: Georgia;
 }
-#classList > .visible {
+.class a {
+  font-size: 100%;
+}
+.class p {
+  padding-left: 2em;
+}
+.fadeTransition > .visible {
   visibility: visible;
   opacity: 1;
   -webkit-transition: opacity 2s linear;
@@ -377,7 +383,7 @@ ul li {
   -o-transition: opacity 2s linear;
   transition: opacity 2s linear;
 }
-#classList > .hidden {
+.fadeTransition > .hidden {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: visibility 0s 2s, opacity 2s linear;

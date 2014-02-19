@@ -35,15 +35,15 @@ $(document).ready(function(){
         $("#photo_details").show();
     })       
 
-    $("#resume").click(function() {
-        resume = 0;
-        $("#resume_details").show();
-	})
+ //    $("#resume").click(function() {
+ //        resume = 0;
+ //        $("#resume_details").show();
+	// })
 
-    $("#projects").click(function() {
-        proj = 0;
-        $("#projects_details").show();
-    })
+ //    $("#projects").click(function() {
+ //        proj = 0;
+ //        $("#projects_details").show();
+ //    })
 
 	$("#fadein").hover(function(){
         if (resume != 0) {
@@ -58,17 +58,17 @@ $(document).ready(function(){
 
 	})
 
-    $("#resume_details").hover(function(){
-        resume = 1;
-    })
+    // $("#resume_details").hover(function(){
+    //     resume = 1;
+    // })
 
     $("#photo_details").hover(function(){
         photo = 1;
     })
 
-    $("#projects_details").hover(function(){
-        proj = 1;
-    })
+    // $("#projects_details").hover(function(){
+    //     proj = 1;
+    // })
 
     $(".gpa").hover(function(){
         $("#gpa_comment").css('display', 'inline').delay(2000).fadeOut();
