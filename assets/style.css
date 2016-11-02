@@ -1,0 +1,43 @@
+        
+body {
+  font-family: Arial;
+  background-color: #E9E9E9;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: 5em;
+  margin-right: 5%;
+  border: #222222;
+  border-width: 100%;
+}
+
+#name {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#picture {
+  margin-right: 5%;
+  margin-bottom: 5%;
+  float:left;
+  opacity:0.8;
+}
+        
+        
+        #bio {
+            font-size: 200%;
+        }
+
+p {
+  font-size: 20px;
+  color:#5d5d5d;
+}
+a {
+  color:#153F50;
+}
+a:visited {
+  color:#50153F;
+}
+
+h1 {
+  color:#2e2e2e
+}
