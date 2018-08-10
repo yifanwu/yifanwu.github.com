@@ -3,9 +3,30 @@
     <meta charset="utf-8">
     <title>yifan wu</title>
     <link href="assets/style.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $("body").mousemove(function(event) {
+        var eye = $(".eye");
+        var x = (eye.offset().left) + (eye.width() / 2);
+        var y = (eye.offset().top) + (eye.height() / 2);
+        var rad = Math.atan2(event.pageX - x, event.pageY - y);
+        var rot = (rad * (180 / Math.PI) * -1) + 180;
+        eye.css({
+          '-webkit-transform': 'rotate(' + rot + 'deg)',
+          '-moz-transform': 'rotate(' + rot + 'deg)',
+          '-ms-transform': 'rotate(' + rot + 'deg)',
+          'transform': 'rotate(' + rot + 'deg)'
+        });
+      });
+      });
+    </script>
   </head>
 
   <body>
+    <div class="eyes">
+      <div class='eye'></div>
+    </div>
     <div class="content">
       <p class="bio">
         Yifan here! I am a PhD candidate at UC berkeley advised by Joe Hellerstein. I think about asynchrony and history. I like relational transducers.
