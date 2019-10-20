@@ -2,47 +2,127 @@ body {
   font-family: Avenir;
 }
 
-.content {
-  margin: auto;
-  padding-top: 100px;
-  width: 70%;
-  max-width: 600px;
+a:link, a:hover, a:visited, a:active {
+  color:rgb(34, 165, 197) !important;
+}
+    
+.boldtext {
+  font-weight: 700 !important;
+}
+  
+.semiboldtext {
+  font-weight: 500 !important;
+}
+  
+.smalltext {
+  font-size:.8em;
 }
 
-.bio a {
-  text-decoration: none;
+.chinese {
+  font-family: "STXihei", "华文细黑";
+  font-size: .5em !important;
+}
+#name {
+  font-size: 3.6em;
+  line-height: 1em;
+  margin-top: .5em;
+  margin-bottom: .2em;
+}
+  
+#title {
+  font-size: 1.2em;
+}
+  
+#email {
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  font-size: .9em;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+  
+#picpad {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  margin-right: 0em;
 }
 
-.links a {
-  text-decoration: none;
-  font-size: 25px;
-  padding-right: 10px;
+li {
+  margin-top: .5em;
 }
 
-.random {
-  font-size: 60%;
+.pubheader {
+  font-size: 1.1em;
 }
 
-/* fun */
-.eyes {
-  padding-top: 10%;
-  margin-left: 50%; 
+.pubtitle{
+  font-weight: 500;
 }
-.eye {
-  position: relative;
-  display: inline-block;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  background: rgb(0, 0, 0, 0.05);
+
+.pubheader {
+  margin-top: 12px;
+  clear: both;
+  font-size: 1.2em;
+  color: 222;
 }
-.eye:after { /*pupil*/
-  position: absolute;
-  bottom: 17px;
-  right: 10px;
-  width: 10px;
-  height: 10px;
-  background: rgb(0, 0, 0, 0.1);
-  border-radius: 50%;
-  content: " ";
+
+.project-statement {
+  font-size: 1em;
+}
+
+.pubgroup {
+  margin-bottom: 14px;
+} 
+
+.place .time {
+  float: right;
+}
+.place .name {
+  font-size: 1.1em;
+}
+.place .location {
+  float: right;
+}
+
+.education .place {
+  margin-bottom: 10px;
+}
+.research-item {
+  margin-bottom: 10px;
+}
+
+#statemment {
+  margin-top: 14px;
+}
+
+.authors .me {
+  font-weight: 500 !important;
+}
+
+.activities .venue {
+  font-weight: 500 !important;
+}
+
+.activity-item {
+  margin-bottom: 5px;
+}
+
+.activities .time {
+  float: right;
+}
+
+.research-place {
+  font-size: 0.9em;
+  font-style: oblique !important;
+}
+
+.research-item .role {
+  font-weight: 500;
+}
+
+.research-item .time {
+  float: right;
+}
+
+.bottom {
+  height: 100px;
 }
