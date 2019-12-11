@@ -1,203 +1,257 @@
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta  charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Yifan Wu</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">    
     <link href="assets/style.css" rel="stylesheet">
   </head>
 
   <body>
-    <div class="row bio">
-      <div class ="col-md-offset-2 col-md-4">
-      <div id="name">
-        <div class="semiboldtext">YIFAN <span class="chinese">轶凡</span></div>
-        <div class="boldtext">WU <span class="chinese">吴</span></div>
+    <div class="container">
+      <div class="row bio">
+        <div class ="intro col-xs-12 col-md-8">
+        <div id="name">
+          <div class="boldtext">YIFAN WU</div>
+          <!-- <div class="chinese">吴轶凡</span></div> -->
+        </div>
+        <div id="title">
+          <div style="margin-top: 1.5rem;"">PhD candidate. UC berkeley</div>
+          <span id="email">yifanwu@berkeley.edu</span>
+          <a href="https://twitter.com/yifanwu" target="_blank"><svg id="Logo_FIXED" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 -50 350 350"><defs><style>.cls-1{fill:none;}.cls-2{fill:#1da1f2;}</style></defs><title>Twitter_Logo_Blue</title><rect class="cls-1" width="400" height="400"/><path class="cls-2" d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"/></svg></a>
+        </div>
+        <!-- <a href="/approach.html">(more)</a> -->
+        <div id="statemment">
+          I create new interfaces and DSLs for data analysis, using database techniques.
+          <br/>
+          I'm <a href="#future">looking</a> for a job for fall 2020.
+        </div>
       </div>
-      <div id="title">
-        <div style="margin-top: 1.5rem;"">PhD candidate. UC berkeley</div>
-        <span id="email">yifanwu@berkeley.edu</span>
-        <a href="https://twitter.com/yifanwu" target="_blank"><svg id="Logo_FIXED" data-name="Logo — FIXED" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 -50 350 350"><defs><style>.cls-1{fill:none;}.cls-2{fill:#1da1f2;}</style></defs><title>Twitter_Logo_Blue</title><rect class="cls-1" width="400" height="400"/><path class="cls-2" d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"/></svg></a>
-      </div>
-      <div id="statemment">
-        I explore different programming interfaces for data analysis.
-      </div>
-    </div>
       
-      <div class="col-md-3">
+      <div class="col-md-4" id="picpad-container">
         <div id="picpad">
-          <img src ="assets/wu-sm.jpg" alt="yw" id="yw-pic" style="width: 200px; margin-top: 20px; float: right;">
+          <img src ="assets/wu-sm-old.jpg" alt="yw" id="yw-pic" style="width: 200px; margin-top: 20px;">
+          <!-- <div><a href="https://www.mattwongphotography.com" style="font-size: 0.5em; float:right">credit</a></div> -->
         </div>
       </div>
       
     </div>
-    <div class="col-md-offset-2 col-md-7">
-      <div class="row pub">
-          <hr>
-        <h3>PUBLICATIONS</h3>
-        <div class="pubgroup">
-          <div class="pubheader">Scalable Analysis Interfaces</div>
-          <div class="project-statement">
-            Dealing with large scale data analysis involves efforts on multiple fronts: faster backend (the usual suspect), code & interface changes.  This line of research focuses on the latter two.
-          </div>
-          <ul>
-            <li>
-              <a class="pubtitle" href="https://arxiv.org/pdf/1907.00062.pdf">DIEL: Transparent Scaling for Interactive Visualization</a>
-              <span class="authors"><span class="me">Yifan Wu</span>, Remco Chang, Eugene Wu, Joseph M Hellerstein</span>
-              <span class="venue">arXiv:1907.00062</span> <a href="https://github.com/yifanwu/diel">(code)</a> <a href="https://logical-interactions.github.io/diel-gallery/">(demo)</a>
-            </li>
-            <li>
-              <a class="pubtitle" href="https://arxiv.org/pdf/1806.01499.pdf">Making Sense of Asynchrony in Interactive Data Visualizations</a>
+    <!-- <div class="col-md-offset-2 col-md-7"> -->
+    <div class="row pub">
+      <hr>
+      <h3>PUBLICATIONS</h3>
+      <div class="pubgroup">
+        <div class="pubheader">Scalable Analysis Interfaces</div>
+        <div class="project-statement">
+          Dealing with large scale data analysis involves efforts on multiple fronts: faster backend (the usual suspect), code & interface changes.  This line of research focuses on the latter two.
+        </div>
+        <ul>
+          <li>
+            <a class="pubtitle" href="https://arxiv.org/pdf/1907.00062.pdf">DIEL: Transparent Scaling for Interactive Visualization</a>
+            <span class="authors"><span class="me">Yifan Wu</span>, Remco Chang, Eugene Wu, Joseph M Hellerstein</span>
+            <span class="venue">arXiv:1907.00062</span> <a href="https://github.com/yifanwu/diel">(code)</a> <a href="https://logical-interactions.github.io/diel-gallery/">(demo)</a>
+          </li>
+          <li>
+            <a class="pubtitle" href=""></a>
+            <span class="authors"><span class="me">Yifan Wu</span>, Remco Chang, Eugene Wu, Joseph M Hellerstein</span>
+            <span class="venue">arXiv:1907.00075</span>
+          </li>
+          <li>
+            <a class="pubtitle" href="https://arxiv.org/pdf/1806.01499.pdf">Making Sense of Asynchrony in Interactive Data Visualizations</a>
+            <span class="authors"><span class="me">Yifan Wu</span>, Larry Xu, Remco Chang, Joseph M Hellerstein, Eugene Wu</span>
+            <span class="venue">arXiv:1806.01499</span>
+          </li>
+          <li>
+              <a class="pubtitle" href="https://arxiv.org/pdf/1806.01499.pdf">A DeVIL-ish approach to inconsistency in interactive visualizations</a>
               <span class="authors"><span class="me">Yifan Wu</span>, Larry Xu, Remco Chang, Joseph M Hellerstein, Eugene Wu</span>
-              <span class="venue">arXiv:1806.01499</span>
-            </li>
-            <li>
-                <a class="pubtitle" href="https://arxiv.org/pdf/1806.01499.pdf">A DeVIL-ish approach to inconsistency in interactive visualizations</a>
-                <span class="authors"><span class="me">Yifan Wu</span>, Larry Xu, Remco Chang, Joseph M Hellerstein, Eugene Wu</span>
-                <span class="venue">arXiv:1806.01499</span><span class="year">2016</span>
-            </li>
-            <li>
-                <a class="pubtitle" href="http://www.cs.columbia.edu/~fotis/pubs/papers/dvms-cidr17.pdf">Combining Design and Performance in a Data Visualization Management System</a>
-                <span class="authors">Eugene Wu, Fotis Psallidas, Zhengjie Miao, Haoci Zhang, Laura Rettig, <span class="me">Yifan Wu</span>, Thibault Sellam</span>
-                <span class="venue">arXiv:1806.01499</span>
-            </li>
-            
-          </ul>
-        </div>
-        <div class="pubgroup">
-          <div class="pubheader">Programming ⋈ Interaction for Analysis</div>
-          <div class="project-statement">
-            Following the DIEL project, we discovered that queries and interactions have a very tight relationship, which allows us to explore a previously unknown aspect---mapping interactions back to code.
-          </div>
-          <ul>
-            <li>
-                <a class="pubtitle" href="">Coming soon!</a>
-            </li>
-          </ul>
-        </div>
-        <div class="pubgroup">
-          <div class="pubheader">Misc</div>
-          <div class="project-statement"></div>
-          <ul>
-            <li>
-                <a class="pubtitle" href="https://www.dropbox.com/s/yaie1a6aqdnxtij/plateau_yifanwu.pdf?dl=0">Is a Dataframe Just a Table</a>
-                <span class="authors"><span class="me">Yifan Wu</span></span>
-                <span class="venue">Workshop on the Intersection of HCI and PL (PLATEAU)</span>
-                <span class="time">2019</span>
-              </li>
-            <li>
-              <a class="pubtitle" href="https://dl.acm.org/citation.cfm?id=3209909">Querying Videos Using DNN Generated Labels</a>
-              <span class="authors"><span class="me">Yifan Wu</span>, Steven Drucker, Matthai Philipose, Lenin Ravindranath</span>
-              <span class="venue">Workshop on Human-In-the-Loop Data Analytics (HILDA)</span>
-              <span class="time">2018</span>
-            </li>
-            <li>
-              <a class="pubtitle" href="http://decisive-workshop.dbvis.de/wp-content/uploads/2017/09/0110-paper.pdf">Towards a bayesian model of data visualization cognition</a>
-              <span class="authors">
-                  <span class="me">Yifan Wu</span>, Larry Xu, Remco Chang, Eugene Wu
-              </span>
-              <span class="venue">IEEE Visualization Workshop on Dealing with Cognitive Biases in Visualisations (DECISIVe)</span>
-              <span class="time">2017</span>
-            </li>
-          </ul>
-          
-        </div>
+              <span class="venue">arXiv:1806.01499</span><span class="year">2016</span>
+          </li>
+          <li>
+              <a class="pubtitle" href="http://www.cs.columbia.edu/~fotis/pubs/papers/dvms-cidr17.pdf">Combining Design and Performance in a Data Visualization Management System</a>
+              <span class="authors">Eugene Wu, Fotis Psallidas, Zhengjie Miao, Haoci Zhang, Laura Rettig, <span class="me">Yifan Wu</span>, Thibault Sellam</span>
+              <span class="venue">CIDR</span><span class="year">2017</span>
+          </li>
+        </ul>
       </div>
-      <div class="row education">
-        <hr>
-        <h3>EDUCATION</h3>
-        <div class="place">
-          <span class="name">University of California, Berkeley</span>
-          <span class="time">2015-present</span>
-          <div class="role">PhD Candidate in Computer Science</div>
-          <div class="metadata">Advisor: Joeseph M. Hellerstein</div>
+      <div class="pubgroup">
+        <div class="pubheader">Programming ⋈ Interaction for Analysis</div>
+        <div class="project-statement">
+          Following the DIEL project, we discovered that queries and interactions have a very tight relationship, which allows us to mapping interactions back to code.
         </div>
-
-        <div class="place">
-            <span class="name">Harvard College</span>
-            <span class="time">2010-2014</span>
-            <div class="role">AB in Computer Science (Economics minor)</div>
-            <div class="metadata">Cum Laude in Field</div>
-        </div>
+        <ul>
+          <li>
+              <p>Coming soon!</p>
+              <!-- a class="pubtitle" href="" -->
+          </li>
+        </ul>
       </div>
-      <div class="row reserach">
-        <hr>
-        <h3>RESEACH EXPERIENCE</h3>
-        <div class="research-item">
-          <div>
-            <span class="role">Graduate Student Researcher</span>
-            <span class="time">2014-present</span>
-          </div>
-          <span class="research-place">University of California, Berkeley</span>
-          <span class="location">Berkeley, CA</span>
-        </div>
-        <div class="research-item">
-            <div>
-              <span class="role">Research Intern</span>
-              <span class="time">Summer, 2017</span>
-            </div>
-          <span class="research-place">Microsoft Research</span>
-          <span class="location">Redmond, WA</span>
-        </div>
-        <div class="research-item">
-          <div>
-            <span class="role">Undergraduate Student Researcher</span>
-            <span class="time">2013-2014</span>
-          </div>
-          <span class="research-place">Harvard University</span>
-          <span class="location">Cambridge, MA</span>
-        </div>
-      </div>
-      <div class="row activities">
-        <hr>
-        <h3>ACADEMIC ACTIVITIES</h3>
-        <div class="activity-item">
-          <span class="activity-content">Mentoring undergrads for research projects</span><span class="time">2018-2019</span>
-        </div>
-        <div class="activity-item">
-          <span class="activity-content">DSIA reviewer</span><span class="time">2019</span>
-        </div>
-        <div class="activity-item">
-          <span class="activity-content"></span>Managing Frontend State with Relational Transducers <span class="venue">ForwardJS</span> <a href="https://www.dropbox.com/s/59sowxb6vuxn9fk/diel_forwardjs_yifanwu.pdf?dl=0">(slides)</a> <span class="time">2019</span>
-        </div>
-        <div class="activity-item">
-          <span class="activity-content">Mid PhD Reflection</span> <span class="venue">RISELab Seminar</span> <a href="https://www.dropbox.com/s/bhz0bk2jn340vd0/thoughts_on_grad_school_yifanwu_2018.pdf?dl=0">(slides)</a><span class="time">2019</span>
-        </div>
+      <div class="pubgroup">
+        <div class="pubheader">Misc</div>
+        <div class="project-statement"></div>
+        <ul>
+          <li>
+              <a class="pubtitle" href="https://www.dropbox.com/s/yaie1a6aqdnxtij/plateau_yifanwu.pdf?dl=0">Is a Dataframe Just a Table</a>
+              <span class="authors"><span class="me">Yifan Wu</span></span>
+              <span class="venue">Workshop on the Intersection of HCI and PL (PLATEAU)</span>
+              <span class="time">2019</span>
+            </li>
+          <li>
+            <a class="pubtitle" href="https://dl.acm.org/citation.cfm?id=3209909">Querying Videos Using DNN Generated Labels</a>
+            <span class="authors"><span class="me">Yifan Wu</span>, Steven Drucker, Matthai Philipose, Lenin Ravindranath</span>
+            <span class="venue">Workshop on Human-In-the-Loop Data Analytics (HILDA)</span>
+            <span class="time">2018</span>
+          </li>
+          <li>
+            <a class="pubtitle" href="http://decisive-workshop.dbvis.de/wp-content/uploads/2017/09/0110-paper.pdf">Towards a bayesian model of data visualization cognition</a>
+            <span class="authors">
+                <span class="me">Yifan Wu</span>, Larry Xu, Remco Chang, Eugene Wu
+            </span>
+            <span class="venue">IEEE Visualization Workshop on Dealing with Cognitive Biases in Visualisations (DECISIVe)</span>
+            <span class="time">2017</span>
+          </li>
+        </ul>
         
-        <div class="activity-item">
-          <span class="activity-content">Asynchronous and Concurrent Interactive Visualization</span>  <span class="venue">RISE Lab Retreat</span> <a href="https://drive.google.com/file/d/0Bw4vSm5uvUWpLTJwVFBjMGRfTTA/view?usp=sharing">(recording)</a> <span class="time">2017</span>
-        </div>
-        <div class="activity-item">
-          <span class="activity-content"><a href="https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=17461">Daghstul seminar</a>: Connecting Visualization and Data Management Research </span>  <span class="venue">Schloss Dagstuhl</span><span class="time">2017</span>
-        </div>
-        
-        <div class="activity-item">
-          <span class="activity-content">
-            Let's Talk About Front-End Consistency, <span class="venue">StrangeLoop</span> <a href="https://www.youtube.com/watch?v=IZe3yvVMwqM">(recording)</a>
-        </span><span class="time">2016</span>
-        </div>
-        <div class="activity-item">
-          <span class="activity-content">TA, CS186 (Introduction to Database Systems)</span> <span class="venue">UC Berkeley</span> <span class="time">2015</span>
-        </div>
-        <div class="activity-item">
-          <span class="activity-content">TA, CS20 (Discrete Mathematics for Computer Science)</span> <span class="venue">Harvard College</span> <span class="time">2014</span>
-          <div>Awarded Bok Center's Certificates of Excellence or Distinction in Teaching </div>
-        </div>
-      </div>
-      <div class="row future">
-        <hr>
-        <h3>⭐ JOB SEEKING ⭐</h3>
-        <p>I am planning to graduate in summer 2020 and am looking for a job! ✨</p>
-        <p>I am excited to continue exploring new tools for data analysts by <span class="semibold">codesigning DSLs and GUIs</span>.  I believe data analysis is a fundamental building block for other interfaces---such as machine learning tools, knowledge bases, and intelligent interfaces.  I believe that in the earlier generation, <a href="http://worrydream.com/MagicInk/">most software is information software</a>, but in the new generation, most software will be analysis software, where users can query and manipulate the underlying data with richer affordances. I want to work on software that respects and promotes the agency of users.</p>
-        <p>I hope to continue my career in an industrial research or startup setting.  Through my time in the Ph.D. program, I have accumulated many new ideas that I'm excited to try out.  I believe a development cycle integrated with feedback from real users can deliver both valuable research insight and real-world impact.</p>
-      </div>
-      <div class="row personal">
-        <hr>
-        <h3>Personal</h3>
-        <p>I grew up in China (Taiyuan, Beijing) and the UK (Nottingham). I love good books (a big Woolf fan), conversations, and activities that help me move with intention (like rock climbing). After a stint with soylent and "rationality", I now spent a lot of time cooking and being silly (or trying to).</p>
-      </div>
-      <div class="row bottom">
       </div>
     </div>
+    <div class="row education">
+      <hr>
+      <h3>EDUCATION</h3>
+      <div class="place">
+        <span class="name">University of California, Berkeley</span>
+        <span class="time">2015-present</span>
+        <div class="role">PhD Candidate in Computer Science</div>
+        <div class="metadata">Advisor: Joeseph M. Hellerstein</div>
+      </div>
+
+      <div class="place">
+          <span class="name">Harvard College</span>
+          <span class="time">2010-2014</span>
+          <div class="role">AB in Computer Science (Economics minor)</div>
+          <div class="metadata">Cum Laude in Field</div>
+      </div>
+    </div>
+    <div class="row reserach">
+      <hr>
+      <h3>RESEACH EXPERIENCE</h3>
+      <div class="employment-item">
+        <div>
+          <span class="role">Graduate Student Researcher</span>
+          <span class="time">2014-present</span>
+        </div>
+        <span class="research-place">University of California, Berkeley</span>
+        <span class="location">Berkeley, CA</span>
+      </div>
+      <div class="employment-item">
+          <div>
+            <span class="role">Research Intern</span>
+            <span class="time">Summer, 2017</span>
+          </div>
+        <span class="research-place">Microsoft Research</span>
+        <span class="location">Redmond, WA</span>
+      </div>
+      <div class="employment-item">
+        <div>
+          <span class="role">Undergraduate Student Researcher</span>
+          <span class="time">2013-2014</span>
+        </div>
+        <span class="research-place">Harvard University</span>
+        <span class="location">Cambridge, MA</span>
+      </div>
+    </div>
+    <div class="row activities">
+      <hr>
+      <h3>ACADEMIC ACTIVITIES</h3>
+      <div class="activity-item">
+        <span class="activity-content"><b>Mentor</b> for undergrads for research projects</span><span class="time">2018-2019</span>
+      </div>
+      <div class="activity-item">
+        <span class="activity-content"><b>Reviewer</b> at Data Systems for Interactive Analysis (DSIA)</span><span class="time">2019</span>
+      </div>
+      <div class="activity-item">
+        <span class="activity-content"></span><b>Speaker</b> at <span class="venue">ForwardJS</span>, talk titled, <i>Managing Frontend State with Relational Transducers</i> <a href="https://www.dropbox.com/s/59sowxb6vuxn9fk/diel_forwardjs_yifanwu.pdf?dl=0">(slides)</a> <span class="time">2019</span>
+      </div>
+      <div class="activity-item">
+        <span class="activity-content"><b>Speaker</b> at <span class="venue">RISELab Seminar</span>, talk titled <i>Mid PhD Reflection</i></span> <a href="https://www.dropbox.com/s/bhz0bk2jn340vd0/thoughts_on_grad_school_yifanwu_2018.pdf?dl=0">(slides)</a><span class="time">2019</span>
+      </div>
+      
+      <div class="activity-item">
+        <span class="activity-content"><b>Speaker</b> at <span class="venue">RISE Lab Retreat</span>, talk titled, Asynchronous and Concurrent Interactive Visualization</span> <a href="https://drive.google.com/file/d/0Bw4vSm5uvUWpLTJwVFBjMGRfTTA/view?usp=sharing">(recording)</a> <span class="time">2017</span>
+      </div>
+      <div class="activity-item">
+        <span class="activity-content"><b>Attendee</b> at <span class="venue">Schloss Dagstuhl</span>, for a seminar on Connecting Visualization and Data Management Research </span> <a href="https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=17461">(link)</a><span class="time">2017</span>
+      </div>
+      
+      <div class="activity-item">
+        <span class="activity-content"><b>Speaker</b> at <span class="venue">StrangeLoop</span>, talk titled <i>Let's Talk About Front-End Consistency</i> <a href="https://www.youtube.com/watch?v=IZe3yvVMwqM">(recording)</a>
+      </span><span class="time">2016</span>
+      </div>
+      <div class="activity-item">
+        <span class="activity-content"><b>Teaching Assistant</b> at <span class="venue">UC Berkeley</span>, for CS186, Introduction to Database Systems</span> <span class="time">2015</span>
+      </div>
+      <div class="activity-item">
+        <span class="activity-content"><b>Teaching Assistant</b> at <span class="venue">Harvard College</span>, for CS20, Discrete Mathematics for Computer Science; awarded with Awarded Bok Center's Certificates of Excellence in Teaching.</span> <span class="time">2014</span>
+      </div>
+    </div>
+    <div class="row activities">
+      <hr>
+      <h3>INDUSTRY EXPERIENCE</h3>
+      <div class="employment-item">
+        <div>
+          <span class="role">Full Stack Engineer</span>
+          <span class="time">Spring, 2015</span>
+        </div>
+        <span class="place">Clever</span>
+        <span class="location">San Francisco, CA</span>
+      </div>
+      <div class="employment-item">
+          <div>
+            <span class="role">Technical Program Manager Intern</span>
+            <span class="time">Summer, 2014</span>
+          </div>
+          <span class="place">Twitter</span>
+          <span class="location">San Francisco, CA</span>
+      </div>
+      <div class="employment-item">
+        <div>
+          <span class="role">Software Engineer Intern</span>
+          <span class="time">Summer, 2013</span>
+        </div>
+        <span class="place">Bing, Microsoft</span>
+        <span class="location">Redmond, WA</span>
+      </div>
+      <div class="employment-item">
+        <div>
+          <span class="role">Explorer Intern</span>
+          <span class="time">Summer, 2012</span>
+        </div>
+        <span class="place">Visual Studio, Microsoft</span>
+        <span class="location">Redmond, WA</span>
+      </div>
+    </div>
+    <div class="row" id="future">
+      <hr>
+      <h3>⭐ JOB SEEKING ⭐</h3>
+      <p>Graduation: <b>summer 2020</b> ✨</p>
+      <p>Job kind: <b>build and research new analysis tools for data analysts</b></p>
+      <p class="intro-para">Interactive visualization is increasingly popular for data analysis--- questions can be quickly specified and answered. However, these interfaces are difficult to program even for those well versed in query languages, such as SQL, and visualization libraries, such as Vega-Lite.</p>
+      <p>The difficulty manifests on two different levels. First is the effort taken to "wire up" frontends with backends, which involves mundane and repetitive efforts like mapping application-level manipulations to query languages, as well as tough issues like coordinating concurrent and asynchronous events. Second is the more subtle effort to type the code---compared to direct manipulation techniques like brushing, coding is OOM slower and requires the analyst to context switch.</p>
+      <p>In my PhD work, I created two new projects.</p>
+      <p>DIEL is a library that makes interactive visualizations as easy as writing relational queries.  By adding "event tables" to a client-server federated database, the specification of the interaction logic is agnostic to where the data lives, client or server.  Much like how when one writes the same query whether the tables are spread over two countries or on the same laptop, in DIEL the developers are agnostic to the location of the data.  The caveat to the agnosticism is that latency often causes a design issue, and to create responsive and consistent UI, the developer need to be able to reason about events' relative ordering, which is exposed in the DIEL design. To read more: scaling, concurrency and consistency.</p>
+      <p>Midas builds on this duality of queries and interactions in DIEL. It is a notebook extension that creates interactive visualizations inferred from queries already written. The developer can move smoothly between the two mediums, picking either one when the best suited, because the interaction is reified into code.</p>
+    </div>
+    <div class="row" id="references">
+      <h3>References</h3>
+      <a href="http://db.cs.berkeley.edu/jmh/">Joe Hellerstein</a>,
+      <a href="http://www.cs.columbia.edu/~ewu/">Eugene Wu</a>,
+      <a href="https://www.cs.tufts.edu/~remco/">Remco Chang</a>
+    </div>
+    <div class="row personal">
+      <hr>
+      <h3>Personal</h3>
+      <p>I grew up in China (Taiyuan, Beijing) and the UK (Nottingham). I love good books (a big Woolf fan), conversations, and activities that help me move with intention (like rock climbing). After a stint with soylent and "rationality", I now spent a lot of my non-professional time cooking and being silly.</p>
+    </div>
+    <div class="row bottom">
+    </div>
+  </div>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
