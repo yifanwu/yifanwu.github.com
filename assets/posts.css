@@ -1,0 +1,24 @@
+.collapse {
+  color: var(--blue-grey-600);
+}
+
+.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+pre {
+  background-color: #f0f0f0;
+}
+
+table {
+  text-align: left;
+}
+
+thead {
+  font-weight: bold !important;
+}
+
+tbody {
+  text-align: left !important;
+}
