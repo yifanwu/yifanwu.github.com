@@ -25,7 +25,7 @@
     <div class="row">
       <p>
         Programming notebooks are a popular medium for data analysis. In addition to code, rich text, and visualizations, notebooks can support interactions, such as <a href="https://github.com/jupyter-widgets/ipywidgets">ipywidgets</a>, or direct javascript integration in <a href="https://observablehq.com/">observables</a>. The rich range of functionalities supported by notebooks makes them an ideal target for tools that aid in data analysis, supporting code, visuals, and interactions.
-        For instance, projects like <a href="https://medium.com/vis-gl/exploring-geospatial-data-with-kepler-gl-cf655839628f">kepler.gl</a>, <a href="https://github.com/vega/ipyvega">ipyvega</a>, and my research project, <a href="https://github.com/yifanwu/midas">Midas</a>, all have integrations to Jupyter Widget.
+        For instance, projects like <a href="https://medium.com/vis-gl/exploring-geospatial-data-with-kepler-gl-cf655839628f">kepler.gl</a>, <a href="https://github.com/vega/ipyvega">ipyvega</a>, and my research project, <a href="https://github.com/yifanwu/midas">Midas</a>, all have integrations to Jupyter Notebook.
       </p>
       <p>
         This post will discuss a model for implementing custom interactive widgets to Python notebooks. The high-level concepts should generalize to other notebooks, such as Jupyter Lab, Colab, and <a href="https://www.deepnote.com/">deepnote</a>. By the end of the post, you should realize that we can do much beyond the ipywidgets provided. We can changing the UI beyond just the output area of the cell---we can, for instance, make a dashboard! We can update the UI based not just on UI event---we can, for instance, listen to events triggered by code execution.
@@ -98,8 +98,7 @@ function handler (comm, msg) {
  }
   // now set the handler
   comm.on_msg(onMessage);
-}
-      </code></pre>
+}</code></pre>
       <p>This should be the only part of your frontend code that's different from what you would have otherwise written for a traditional interface. Like all other UIs, the UI that's part of Jupyter Notebooks is changing the state of the UI, e.g., new elements, different styling, based on new events. If you have an existing UI library, adding it to the notebook requires little change. For instance, calls like <code>refToAReactComponent.hide()</code> in the snippet above 
       </p>
       <p>
@@ -111,10 +110,56 @@ self.comm.on_msg(msg_handler)
 self.comm.send(your_msg_obj)
 def msg_handler(msg):
     # your object from JS will be in msg["content"]["data"]
-    # you should write code that changes the python state here
-      </code></pre>
+    # you should write code that changes the python state here</code></pre>
       <p>
         🎉 With these two code snippets, you have set up the most important parts of your software! 🎉
+      </p>
+    </div>
+    <div class="row">
+      <h3>Coordinating State</h3>
+      <p> Since both code and the UI could change the state of the UI (state in JavaScript), the state in Python (or R, etc.). There are at least two issues that you need to tend to. First is when the page is refreshed. You need to store the Javascript state somewhere so that when the page loads, the content is still there.
+        Second is when the kernel restarts, you need to make sure that the content is now reflecting the fact that the kernel is in a blank state. 
+      </p>
+      <p>
+        Most of this coordination logic is application logic specific. However, a general strategy could be designed based on a database recover strategy---log replay.  When there are sequences of events done on the UI side, log them and store in a more persistent state (e.g., in the Python kernel) for replay.
+      </p>
+      <p> Another subtle issue is that the communication object changes when you restart the kernel, and you need to refresh your browser-side object as well. There may be an elegant way to address this in the notebook, but at least for Jupyter, we can into some specific problems that the <a href="https://jupyter-notebook.readthedocs.io/en/stable/comms.html">official doc</a> does not mention. We describe the issue and solution below, which might save you a day of work. 
+      </p>
+      <div class="collapse show">
+      <p >
+        Here are some "quirks" around the Jupyter Notebook when it comes to the creation and destruction of the comm object. In Jupyter Notebook, either the front-end or the kernel can register or open the comm, but the comm must be registered first. The comm can be registered in multiple locations---the side that opens the comm will send to all that opened it, and all the registered places can send to the sides that opened it. However, if you try to register a comm that has already been opened, it will not receive messages---this causes the error <code>Comm promise not found for a_comm_id</code>.
+      </p>
+      <p>
+        Once you understand this behavior, you can now design a range of workarounds. The specific one we chose (with <a href="https://github.com/yifanwu/midas/pull/7/files">Ryan's help</a>), is that using a special comm whose sole purpose is for recovery. If we detect that the kernel has changed, we will send a message via the recovery comm for the Python kernel to restart. The two snippets below show more details.
+      </p>
+      <pre><code language="javascript">function load_ipython_extension() {
+  Jupyter.notebook.events.on("kernel_connected.Kernel", function() {
+      tearDownMidasComponent();
+  });
+
+  LogSteps("Kernel starting, opening recovery comm");
+  function checkIfNull() {
+    if (Jupyter.notebook.kernel === null) {
+        window.setTimeout(checkIfNull, 100);
+    } else {
+      const comm = Jupyter.notebook.kernel.comm_manager.new_comm(MIDAS_RECOVERY_COMM_NAME);
+      comm.send({});
+    }
+  }
+  checkIfNull();
+}</code></pre>
+      Then in the python, the comm should be reset and the recovery of the Javascript state set.
+      <pre><code language=python>@comm.on_msg // you can also just call the function directly
+def _recv(msg):
+    debug_log("Received recovery request. Reopening comm...")
+    // reset comm
+    // recover state</code></pre>
+  </div>
+      <h3>Persisting State</h3>
+      <p>A notebook is not only an exploration tool but also a recording tool. Some tools persist the UI level information in the cell meta-data, such as <a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tree/master/src/jupyter_contrib_nbextensions/nbextensions/codefolding">code folding</a>. A similar alternative is to store the data to your own format and then reload from it.
+      </p>
+      <p>
+        A very different strategy is to "serialize" the state in code, which can be as simple as encoding the actions in some code APIs, or as complex as using the array of bi-directional programming techniques.
       </p>
     </div>
     <div class="row">
@@ -164,7 +209,7 @@ ReactDOM.render(&lt;YouComponent/&gt;, document.getElementById("yourID"))</code>
     </div>
     <div class="row">
       <p>
-        That's all I have for now. If you have comments or corrections, please let me know!
+        That's all I have for now. If you have comments or corrections, please let me know! If you are curious about what my goals and intensions are for a notebook.
       </p>
     </div>
     <div style="margin-bottom:100px"></div>

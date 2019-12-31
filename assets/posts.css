@@ -22,3 +22,7 @@ thead {
 tbody {
   text-align: left !important;
 }
+
+.technical {
+  color: var(--cyan-900);
+}
