@@ -28,7 +28,7 @@
         For instance, projects like <a href="https://medium.com/vis-gl/exploring-geospatial-data-with-kepler-gl-cf655839628f">kepler.gl</a>, <a href="https://github.com/vega/ipyvega">ipyvega</a>, and my research project, <a href="https://github.com/yifanwu/midas">Midas</a>, all have integrations to Jupyter Notebook.
       </p>
       <p>
-        This post will discuss a model for implementing custom interactive widgets to Python notebooks. The high-level concepts should generalize to other notebooks, such as Jupyter Lab, Colab, and <a href="https://www.deepnote.com/">deepnote</a>. By the end of the post, you should realize that we can do much beyond the ipywidgets provided. We can changing the UI beyond just the output area of the cell---we can, for instance, make a dashboard! We can update the UI based not just on UI event---we can, for instance, listen to events triggered by code execution.
+        This post will discuss a model for implementing custom interactive widgets to Python notebooks. The high-level concepts should generalize to other notebooks, such as Jupyter Lab, Colab, and <a href="https://www.deepnote.com/">deepnote</a>. By the end of the post, you should realize that we can do much beyond the ipywidgets provided. We can change the UI beyond just the output area of the cell---we can, for instance, make a dashboard! We can update the UI based not just on UI event---we can, for instance, listen to events triggered by code execution.
       </p>
       <p>
         If you are not interested in implementation details, feel free to toggle the content: <a data-toggle="collapse" data-target=".collapse" style="font-weight: bold;">Toggle Details</a>.
@@ -43,7 +43,7 @@
         Note that the exception is, of course, of Javascript kernels running on the main thread in the browser. If it is Javascript running in Node.js or a WebWorker thread, the discussion still applies.
       </p>
     </div>
-    <div class="row collapse show">
+    <a class="row collapse show">
       <p>
         Concretely, in Jupyter notebooks, this communication can be done in (at least) two ways. One is using a custom <a href="https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Custom.html">Jupyter Widget</a>, or using <a href="https://jupyter-notebook.readthedocs.io/en/stable/comms.html">Comms</a> (short for communication).
       </p>
@@ -73,7 +73,7 @@
           </tr>
         </tbody>
       </table>
-      <p>Since there is good documentation for the first approach, for the rest of this post, I'll talk in more detail about the code to set up for the second approach. For an example implementation of the first approach, see <a href="https://github.com/vega/ipyvega/blob/master/vega/widget.py">widget.py</a>. Now, let's begin with the UI side code on the frontend. The following is useful if you want to use <b>Python kernel to control UI events</b>.
+      <p>Since there is good documentation for the first approach, for the rest of this post, I'll talk in more detail about the code to set up for the second approach. For an example implementation of the first approach, see <a href="https://github.com/jupyter-widgets/widget-ts-cookiecutter/">widget cookiecutter</a>, and <a href="https://github.com/vega/ipyvega/blob/master/vega/widget.py">widget.py</a>. Now, let's begin with the UI side code on the frontend. The following is useful if you want to use <b>Python kernel to control UI events</b>.
       </p>
       
       <pre><code class="javascript" id="js_handler">Jupyter.notebook.kernel.comm_manager.register_target(YOUR_COMM_NAME, handler);
@@ -166,16 +166,11 @@ def _recv(msg):
       <h3>UI Affordances of the Notebook</h3>
       <p>
         There are many ways to modify the UI of the notebook beyond creating a widget that fits the cell output area.
-        The first is a <b>dashboard</b> instead of .
-        Another is <b>cell manipulation</b>, where you can create and modify cells. 
-      </p>
-      <p>
-        Below we give some concretae examplesa nd code snippets for these UI changes.
+        The first is a <b>dashboard</b> instead of modifying the cell outputs.
+        Another is <b>cell manipulation</b>, where you can create and modify cells.  Below we give some concretae examplesa nd code snippets for these UI changes.
       </p>
       <div class="collapse show">
-        <p> <b>Dashboard</b> If you work with JupyterLab, you can directly access special widgets like <code>MainAreaWidget</code> (example in <a href="https://jupyterlab.readthedocs.io/en/stable/developer/extension_tutorial.html#extension-tutorial">this tutorial</a>).
- 
-          When working Jupyter Notebooks, you have to get a little more creative. Consider the snippet below, which is how I instrumented a "dashboard" area to the right side of the notebook. In the snippet, I rely on the internal implementation of the Jupyter notebook, where <code>notebook</code> is the ID of the notebook div. It's, of course, not great that I'm relying on this, but for a research prototype, this hack-ish approach meets my needs.
+        <p> <b>Dashboard</b> If you work with JupyterLab, you can directly access special widgets like <code>MainAreaWidget</code> (example in <a href="https://jupyterlab.readthedocs.io/en/stable/developer/extension_tutorial.html#extension-tutorial">this tutorial</a>).  When working Jupyter Notebooks, you have to get a little more creative. Consider the snippet below, which is how I instrumented a "dashboard" area to the right side of the notebook. In the snippet, I rely on the internal implementation of the Jupyter notebook, where <code>notebook</code> is the ID of the notebook div. It's, of course, not great that I'm relying on this, but for a research prototype, this hack-ish approach meets my needs.
         </p>
         <pre><code>const aDiv = $("&lt;div id="+yourID+"/&gt;");
 $("#notebook").append(aDiv);
@@ -209,7 +204,7 @@ ReactDOM.render(&lt;YouComponent/&gt;, document.getElementById("yourID"))</code>
     </div>
     <div class="row">
       <p>
-        That's all I have for now. If you have comments or corrections, please let me know! If you are curious about what my goals and intensions are for a notebook.
+        That's all I have for now. If you have comments or corrections, please let me know! If you are curious about what my goals and intensions are for a notebook, I have a post <a href="approach.html">here</a>.
       </p>
     </div>
     <div style="margin-bottom:100px"></div>
