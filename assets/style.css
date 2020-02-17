@@ -193,3 +193,14 @@ li {
 .approach .summary {
   font-weight: 500;
 }
+
+@media print {
+  .col-md-8 {
+    width: 60%;
+    float: left;
+  }
+  .col-md-4 {
+    width: 30%;
+    float:right;
+  }
+}

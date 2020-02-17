@@ -40,7 +40,7 @@
         <hr>
         <h3>PUBLICATIONS</h3>
         <div class="pubgroup">
-          <div class="pubheader">Scalable Analysis Interfaces</div>
+          <div class="pubheader">Scalable Data Analysis Interfaces</div>
           <div class="project-statement">
             Dealing with large scale data analysis involves efforts on multiple fronts: faster backend (the usual suspect), code & interface changes.  This line of research focuses on the latter two.
           </div>
@@ -69,9 +69,9 @@
           </ul>
         </div>
         <div class="pubgroup">
-          <div class="pubheader">Bi-directional Interactions in Computation Notebooks</div>
+          <div class="pubheader">Reification of Interactions in Computation Notebooks</div>
           <div class="project-statement">
-            Following the DIEL project, we discovered that queries and interactions have a very tight relationship, which allows us to reify interactions back to code, enabling data anlysts to switch smoothly between programming and interactions.
+            <i>DIEL</i> suggests that queries (i.e. code) can inform interactions and vice versa---they both perform some data manipulation. <i>Midas</i> is built on this insight, allowing data anlysts to switch smoothly between writing code and interacting with charts.  Stay tuned for the code and paper!
           </div>
           <!-- <ul>
             <li data-paper="midas">
@@ -90,7 +90,8 @@
                 <a class="pubtitle" href="https://www.dropbox.com/s/yaie1a6aqdnxtij/plateau_yifanwu.pdf?dl=0">Is a Dataframe Just a Table</a>
                 <span class="authors"><span class="me">Yifan Wu</span></span>
                 <span class="venue">Workshop on the Intersection of HCI and PL (PLATEAU)</span>
-                <span class="time">2019</span>
+                <span class="time">2019</span> <a href="
+                https://news.ycombinator.com/item?id=22286237">(review by HN)</a>
               </li>
             <li>
               <a class="pubtitle" href="https://dl.acm.org/citation.cfm?id=3209909">Querying Videos Using DNN Generated Labels</a>
@@ -230,11 +231,14 @@
       </div>
       <div class="row" id="future">
         <hr>
-        <h3>⭐ JOB SEEKING ⭐</h3>
-        <p>Graduation: <b>summer 2020</b> ✨</p>
-        <p>Job kind: <b>build and research new analysis tools for data analysts</b></p>
-        <p>Domains of experoience: databases, programming experience for data analysis, and future domain of interest: medical records</p>
-        <p class="intro-para">Interactive visualization is increasingly popular for data analysis--- questions can be quickly specified and answered. However, these interfaces are difficult to program even for those well versed in query languages, such as SQL, and visualization libraries, such as Vega-Lite.</p>
+        <h3>⭐ JOB/FUNDING SEEKING ⭐</h3>
+        <p>I plan to graduate <b>summer 2020</b>, and I hope to continue building tools for data analysts.  These days, I am particularly interested in scaling analysis <i>teams</i>.  I think the <b>history</b> of the individual/organization's programming traces has huge potential to make analaysis easier by allowing the tools to build custom on-the-fly <b>interactive visualizations/models</b> and and <b>surfacing relevant information</b> synthesized from history.</p>
+      </div>
+
+      <div class="row" id="future">
+        <hr>
+        <h3>PhD Summary</h3>
+        <p class="intro-para">Interactive visualization is increasingly popular for data analysis---questions can be quickly specified and answered. However, these interfaces are difficult to program even for those well versed in query languages, such as SQL, and visualization libraries, such as Vega-Lite.</p>
         <p>The difficulty manifests on two different levels. First is the effort taken to "wire up" frontends with backends, which involves mundane and repetitive efforts like mapping application-level manipulations to query languages, as well as tough issues like coordinating concurrent and asynchronous events. Second is the more subtle effort to type the code---compared to direct manipulation techniques like brushing, coding is OOM slower and requires the analyst to context switch.</p>
         <p>In my PhD work, I created two new projects.</p>
         <p>DIEL is a library that makes interactive visualizations as easy as writing relational queries.  By adding "event tables" to a client-server federated database, the specification of the interaction logic is agnostic to where the data lives, client or server.  Much like how when one writes the same query whether the tables are spread over two countries or on the same laptop, in DIEL the developers are agnostic to the location of the data.  The caveat to the agnosticism is that latency often causes a design issue, and to create responsive and consistent UI, the developer need to be able to reason about events' relative ordering, which is exposed in the DIEL design. To read more: scaling, concurrency and consistency.</p>
