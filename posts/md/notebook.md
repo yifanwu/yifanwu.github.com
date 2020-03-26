@@ -4,13 +4,11 @@
 
 by [Yifan](/)
 
-Programming notebooks are a popular medium for data analysis. In addition to code, rich text, and visualizations, notebooks can support interactions, such as [ipywidgets](https://github.com/jupyter-widgets/ipywidgets")
-, or direct javascript integration in 
-[observables](https://observablehq.com/"). The rich range of functionalities supported by notebooks makes them an ideal target for tools that aid in data analysis, supporting code, visuals, and interactions.
+Programming notebooks are a popular medium for data analysis. In addition to code, rich text, and visualizations, notebooks can support interactions, such as [ipywidgets](https://github.com/jupyter-widgets/ipywidgets"), or direct javascript integration in [observables](https://observablehq.com/"). The rich range of functionalities supported by notebooks makes them an ideal target for tools that aid in data analysis, supporting code, visuals, and interactions.
 
 For instance, projects like [kepler.gl](https://medium.com/vis-gl/exploring-geospatial-data-with-kepler-gl-cf655839628f"), [ipyvega](https://github.com/vega/ipyvega"), and my research project, [Midas](https://github.com/yifanwu/midas), all have integrations to Jupyter Notebook.
 
-This post will discuss a model for implementing custom interactive widgets to Python notebooks. The high-level concepts should generalize to other notebooks, such as Jupyter Lab, Colab, and [deepnote](https://www.deepnote.com/). By the end of the post, you should realize that we can do much beyond the `ipywidgets` provided. We can change the UI beyond just the output area of the cell---we can, for instance, make a dashboard! We can update the UI based not just on UI event---we can, for instance, listen to events triggered by code execution.
+This post will discuss a model for implementing custom interactive widgets to Python notebooks. The high-level concepts should generalize to other notebooks, such as Jupyter Lab, Colab, and [deepnote](https://www.deepnote.com/). By the end of the post, you should realize that we can do much beyond the `ipywidgets` provided. We can change the UI beyond just the output area of the cell, to e.g., a dashboard, and based not just on UI event but also function calls.
 
 If you are not interested in implementation details, feel free to toggle the content: <a data-toggle="collapse" data-target=".collapse" style="font-weight: bold;">Toggle Details</a>.
 
@@ -24,7 +22,7 @@ Concretely, in Jupyter notebooks, this communication can be done in (at least) t
 
 The first method is well documented in the [link](https://ipywidgets.readthedocs.io/en/latest/examples/Widget%20Custom.html), and you can also refer to [ipyvega](https://github.com/vega/ipyvega), for example. It is also the officially supported one. The second method, comms, is similar to all message-passing systems, like WebWorkers and the actor model. The UI sends the kernel some message, and the kernel handles that messages and sends messages back to the UI.
 
-To pick between the two approaches, the table below draws a comparison. The Comm approach is lower level, hence more flexible and easier to learn, but possibly more tedious to write. The design of Jupyter Widgets is probably elegant, but also opinionated. If you are like me and would prefer not to learn another framework for thinking about state and control, pick _Comm_ and build your UI, for which you can use React, Vue, jQuery, etc.
+To pick between the two approaches, the table below draws a comparison. The `Comm` approach is lower level, hence more flexible and easier to learn, but possibly more tedious to write. The design of Jupyter Widgets is probably elegant, but also opinionated. If you are like me and would prefer not to learn another framework for thinking about state and control, pick _Comm_ and build your UI, for which you can use React, Vue, jQuery, etc.
 
 </div>
 
@@ -44,7 +42,7 @@ To pick between the two approaches, the table below draws a comparison. The Comm
  <td>High</td>
  </tr>
  <tr>
- <td>Succinct</td>
+ <td>Brevity</td>
  <td>High</td>
  <td>Low</td>
  </tr>
@@ -55,26 +53,26 @@ Since there is good documentation for the first approach, for the rest of this p
 
 <pre><code class="javascript" id="js_handler">Jupyter.notebook.kernel.comm_manager.register_target(YOUR_COMM_NAME, handler);
 function handler (comm, msg) {
- // comm will be the reference to the communication layer
- function onMessage(msg) {
- // msg.content.data will contain your message
- const load = msg.content.data;
- // you can use this message to make changes to your UI state, for example, I have `.type` in my message to inform the handler what shape to expect the message as
- switch (load.type) {
- case "hide": {
- // invoke the component to change
- // for instance, refToAReactComponent here could be 
- refToAReactComponent.hide();
- return;
- }
- case "show": {
- refToAnotherReactComponent.addSelection(load.value);
- return;
- }
- // and so on...
- }
- // now set the handler
- comm.on_msg(onMessage);
+  // comm will be the reference to the communication layer
+  function onMessage(msg) {
+    // msg.content.data will contain your message
+    const load = msg.content.data;
+    // you can use this message to make changes to your UI state, for example, I have `.type` in my message to inform the handler what shape to expect the message as
+    switch (load.type) {
+      case "hide": {
+        // invoke the component to change
+        refToAReactComponent.hide();
+        return;
+      }
+      case "show": {
+        refToAnotherReactComponent.addSelection(load.value);
+        return;
+    }
+    // and so on...
+  }
+  // now set the handler
+  comm.on_msg(onMessage);
+  }
 }</code></pre>
 
 This should be the only part of your frontend code that's different from what you would have otherwise written for a traditional interface. Like all other UIs, the UI that's part of Jupyter Notebooks is changing the state of the UI, e.g., new elements, different styling, based on new events. If you have an existing UI library, adding it to the notebook requires little change. For instance, calls like `refToAReactComponent.hide()` in the snippet above.
@@ -155,13 +153,10 @@ $("#notebook").append(aDiv);
 // then later you create the React component
 ReactDOM.render(&lt;YouComponent/&gt;, document.getElementById("yourID"))</code></pre>
 
+A great example of complex cell manipulation in JupyterLab is [Gather](https://github.com/microsoft/gather). Concretely, for Jupyter notebooks, you can manipulate these like the following, in the JavaScript console in the browser.
 
-If you want an example of cell manipulation, a great example of complex cell manipulation in JupyterLab is [Gather](https://github.com/microsoft/gather). Concretely, for Jupyter notebooks, you can manipulate these like the following.
-
-<pre>
- <code class="javascript">c = Jupyter.notebook.insert_cell_above("code");
- c.set_text("boo = 1");</code>
- </pre>
+<pre><code class="javascript">c = Jupyter.notebook.insert_cell_above("code");
+c.set_text("boo = 1");</code></pre>
 </div>
 
 ## Gluing Everything Together
