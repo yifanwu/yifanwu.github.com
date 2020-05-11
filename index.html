@@ -46,9 +46,9 @@
           </div>
           <ul>
             <li data-paper="midas">
-              <span data-paper="diel" class="paper-zoom">DIEL: Transparent Scaling for Interactive Visualization</span>
+              <a class="pubtitle" href="https://arxiv.org/pdf/1907.00062.pdf">DIEL: Transparent Scaling for Interactive Visualization</a>
               <span class="authors"><span class="me">Yifan Wu</span>, Remco Chang, Eugene Wu, Joseph M Hellerstein</span>
-              <span class="venue">arXiv:1907.00062</span> <a class="pubtitle" href="https://arxiv.org/pdf/1907.00062.pdf">(paper)</a>, <a href="https://github.com/yifanwu/diel">(code)</a>, <a href="https://logical-interactions.github.io/diel-gallery/">(demo)</a>
+              <span class="venue">arXiv:1907.00062</span> <a href="https://logical-interactions.github.io/diel/">(summary)</a> <a href="https://github.com/yifanwu/diel">(code)</a> <a href="https://logical-interactions.github.io/diel-gallery/">(demo)</a>
               <p class="zoom-content"></p>
             </li>
             <li>
@@ -57,21 +57,21 @@
               <span class="venue">arXiv:1806.01499</span>
             </li>
             <li>
-                <a class="pubtitle" href="https://arxiv.org/pdf/1806.01499.pdf">A DeVIL-ish Approach to Inconsistency in Interactive Visualizations</a>
+                <a class="pubtitle" href="https://dl.acm.org/doi/10.1145/2939502.2939517">A DeVIL-ish Approach to Inconsistency in Interactive Visualizations</a>
                 <span class="authors"><span class="me">Yifan Wu</span>, Larry Xu, Remco Chang, Joseph M Hellerstein, Eugene Wu</span>
-                <span class="venue">arXiv:1806.01499</span><span class="year">2016</span>
+                <span class="venue">HILDA @ SIGMOD</span> <span class="year">2016</span>
             </li>
             <li>
                 <a class="pubtitle" href="http://www.cs.columbia.edu/~fotis/pubs/papers/dvms-cidr17.pdf">Combining Design and Performance in a Data Visualization Management System</a>
                 <span class="authors">Eugene Wu, Fotis Psallidas, Zhengjie Miao, Haoci Zhang, Laura Rettig, <span class="me">Yifan Wu</span>, Thibault Sellam</span>
-                <span class="venue">CIDR</span><span class="year">2017</span>
+                <span class="venue">CIDR</span> <span class="year">2017</span>
             </li>
           </ul>
         </div>
         <div class="pubgroup">
           <div class="pubheader">Reification of Interactions in Computation Notebooks</div>
           <div class="project-statement">
-            <i>DIEL</i> suggests that queries (i.e. code) can inform interactions and vice versa---they both perform some data manipulation. <i>Midas</i> is built on this insight, allowing data anlysts to switch smoothly between writing code and interacting with charts.  Stay tuned for the code and paper!
+            <i>DIEL</i> suggests that queries (i.e. code) can inform interactions and vice versa---they both perform some data manipulation. <i>Midas</i> is built on this insight, allowing data anlysts to switch smoothly between writing code and interacting with charts.  If you are feeling adventurous, check out the <a href="https://github.com/yifanwu/midas">repo</a>. Stay tuned for the paper!
           </div>
           <!-- <ul>
             <li data-paper="midas">
@@ -130,7 +130,7 @@
       </div>
       <div class="row reserach">
         <hr>
-        <h3>RESEACH EXPERIENCE</h3>
+        <h3>RESEARCH EXPERIENCE</h3>
         <div class="employment-item">
           <div>
             <span class="role">Graduate Student Researcher</span>
@@ -235,23 +235,23 @@
       <div class="row" id="future">
         <hr>
         <h3>⭐ JOB/FUNDING SEEKING ⭐</h3>
-        <p>I plan to graduate <b>summer 2020</b>, and I hope to continue building tools for data analysts.  These days, I am particularly interested in scaling analysis <i>teams</i>.  I think the <b>history</b> of the individual/organization's programming traces has huge potential to make analaysis easier by allowing the tools to build custom on-the-fly <b>interactive visualizations/models</b> and and <b>surfacing relevant information</b> synthesized from history.</p>
+        <p>I plan to graduate <b>summer/fall 2020</b>, and I hope to continue building tools for data analysts.  These days, I am particularly interested in scaling analysis <i>teams</i>.  I think the <b>history</b> of the individual/organization's programming traces has huge potential to make analysis easier by allowing the tools to build custom on-the-fly <b>interactive visualizations/models</b> and <b>surfacing relevant information</b> synthesized from history.</p>
       </div>
-
-      <div class="row" id="future">
+      <div class="row" id="summary">
         <hr>
         <h3>PhD Summary</h3>
         <p class="intro-para">Interactive visualization is increasingly popular for data analysis---questions can be quickly specified and answered. However, these interfaces are difficult to program even for those well versed in query languages, such as SQL, and visualization libraries, such as Vega-Lite.</p>
         <p>The difficulty manifests on two different levels. First is the effort taken to "wire up" frontends with backends, which involves mundane and repetitive efforts like mapping application-level manipulations to query languages, as well as tough issues like coordinating concurrent and asynchronous events. Second is the more subtle effort to type the code---compared to direct manipulation techniques like brushing, coding is OOM slower and requires the analyst to context switch.</p>
-        <p>In my PhD work, I created two new projects.</p>
-        <p>DIEL is a library that makes interactive visualizations as easy as writing relational queries.  By adding "event tables" to a client-server federated database, the specification of the interaction logic is agnostic to where the data lives, client or server.  Much like how when one writes the same query whether the tables are spread over two countries or on the same laptop, in DIEL the developers are agnostic to the location of the data.  The caveat to the agnosticism is that latency often causes a design issue, and to create responsive and consistent UI, the developer need to be able to reason about events' relative ordering, which is exposed in the DIEL design. To read more: scaling, concurrency and consistency.</p>
-        <p>MIDAS builds on this duality of queries and interactions in DIEL. It is a notebook extension that creates interactive visualizations inferred from queries already written. The developer can move smoothly between the two mediums, picking either one when the best suited, because the interaction is reified into code.</p>
+        <p>In my Ph.D. I created two new projects.</p>
+        <p>DIEL, a framework that helps developers build scalable interative data visualizations under a simple, declarative interface. DIEL treats UI events as a stream of data that is captured in an event history for reuse. Developers declare what the state of the interface should be after the arrival of events. DIEL compiles these declarative specifications into relational queries over both event history and the data to be visualized. In doing so, DIEL makes it easier to develop visualizations that are robust against changes to the size and location of data. To read more: <a href="https://arxiv.org/pdf/1907.00062.pdf">scaling</a>, <a href="https://arxiv.org/pdf/1806.01499.pdf">concurrency </a> and <a href="https://dl.acm.org/doi/10.1145/2939502.2939517">consistency</a>.</p>
+        <p>Midas builds on this duality of queries and interactions in DIEL. It is a notebook extension that creates interactive visualizations inferred from queries already written. The developer can move smoothly between the two mediums.</p>
       </div>
       <div class="row" id="references">
         <h3>References</h3>
         <a href="http://db.cs.berkeley.edu/jmh/">Joe Hellerstein</a>,
         <a href="http://www.cs.columbia.edu/~ewu/">Eugene Wu</a>,
-        <a href="https://www.cs.tufts.edu/~remco/">Remco Chang</a>
+        <a href="https://www.cs.tufts.edu/~remco/">Remco Chang</a>,
+        <a href="https://arvindsatya.com/">Arvind Satyanarayan</a>
       </div>
       <div class="row personal">
         <hr>
