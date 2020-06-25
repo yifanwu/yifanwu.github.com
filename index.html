@@ -13,7 +13,6 @@
         <div class ="intro col-xs-12 col-md-8">
         <div id="name">
           <div class="boldtext">YIFAN WU</div>
-          <!-- <div class="chinese">吴轶凡 </span></div> -->
         </div>
         <div id="title">
           <div style="margin-top: 1.5rem;"">PhD candidate. UC berkeley</div>
@@ -24,7 +23,7 @@
         <div id="statemment">
           I create new interfaces and DSLs for data analysis, using database techniques.
           <br/>
-          I'm <a href="#future">looking</a> for a job for fall 2020.
+          I'm <a href="#future">graduating</a> fall 2020.
         </div>
       </div>
       
@@ -45,20 +44,25 @@
             Dealing with large scale data analysis involves efforts on multiple fronts: faster backend (the usual suspect), code & interface changes.  This line of research focuses on the latter two.
           </div>
           <ul>
-            <li data-paper="midas">
+            <li data-paper="diel">
               <a class="pubtitle" href="https://arxiv.org/pdf/1907.00062.pdf">DIEL: Transparent Scaling for Interactive Visualization</a>
-              <span class="authors"><span class="me">Yifan Wu</span>, Remco Chang, Eugene Wu, Joseph M Hellerstein</span>
+              <span class="authors"><span class="me">Yifan Wu</span>, Remco Chang, Eugene Wu, Jos Hellerstein</span>
               <span class="venue">arXiv:1907.00062</span> <a href="https://logical-interactions.github.io/diel/">(summary)</a> <a href="https://github.com/yifanwu/diel">(code)</a> <a href="https://logical-interactions.github.io/diel-gallery/">(demo)</a>
               <p class="zoom-content"></p>
             </li>
+            <li data-paper="timespans">
+              <a class="pubtitle" href="https://arxiv.org/pdf/1907.00075.pdf">Programming with Timespans in Interactive Visualizations</a>
+              <span class="authors"><span class="me">Yifan Wu</span>, Remco Chang, Eugene Wu, Jos Hellerstein</span>
+              <span class="venue">arXiv:1907.00075</span>
+            </li>
             <li>
               <a class="pubtitle" href="https://arxiv.org/pdf/1806.01499.pdf">Making Sense of Asynchrony in Interactive Data Visualizations</a>
-              <span class="authors"><span class="me">Yifan Wu</span>, Larry Xu, Remco Chang, Joseph M Hellerstein, Eugene Wu</span>
+              <span class="authors"><span class="me">Yifan Wu</span>, Larry Xu, Remco Chang, Jos Hellerstein, Eugene Wu</span>
               <span class="venue">arXiv:1806.01499</span>
             </li>
             <li>
                 <a class="pubtitle" href="https://dl.acm.org/doi/10.1145/2939502.2939517">A DeVIL-ish Approach to Inconsistency in Interactive Visualizations</a>
-                <span class="authors"><span class="me">Yifan Wu</span>, Larry Xu, Remco Chang, Joseph M Hellerstein, Eugene Wu</span>
+                <span class="authors"><span class="me">Yifan Wu</span>, Larry Xu, Remco Chang, Jos Hellerstein, Eugene Wu</span>
                 <span class="venue">HILDA @ SIGMOD</span> <span class="year">2016</span>
             </li>
             <li>
@@ -71,20 +75,20 @@
         <div class="pubgroup">
           <div class="pubheader">Reification of Interactions in Computation Notebooks</div>
           <div class="project-statement">
-            <i>DIEL</i> suggests that queries (i.e. code) can inform interactions and vice versa---they both perform some data manipulation. <i>Midas</i> is built on this insight, allowing data anlysts to switch smoothly between writing code and interacting with charts.  If you are feeling adventurous, check out the <a href="https://github.com/yifanwu/midas">repo</a>. Stay tuned for the paper!
+            <i>DIEL</i> suggests a close connection between queries and interactive visualizations---they both perform some data manipulation. Based on the insight, we developed B2 to allow data anlysts to switch smoothly between writing code and interacting with charts.  We are currently investigating DSLs beyond relational algebras that express shared semantics of code and interactions.
           </div>
-          <!-- <ul>
-            <li data-paper="midas">
-              <span data-paper="midas" class="paper-zoom">Midas: Bi-directional Interactions in Computation Notebooks</span>
-              <span class="authors"><span class="me">Yifan Wu</span>, Remco Chang, Eugene Wu, Joseph M Hellerstein</span>
-              <span class="venue">arXiv:1907.00075</span><a class="pubtitle" href="">paper</a><a href="https://github.com/yifanwu/midas">(code coming soon)</a>
+          <ul>
+            <li data-paper="b2">
+              <span data-paper="b2" class="paper-zoom">B2: Bridging Code and Interactive Visualization in Computational Notebooks</span>
+              <span class="authors"><span class="me">Yifan Wu</span>, Arvind Satyanarayan, Joe Hellerstein</span>
+              <span class="venue">@ UIST 2020</span> <a href="https://github.com/yifanwu/midas">(code)</a> <a href="https://vimeo.com/430781306#t=15m0s,">(demo)</a>
               <p class="zoom-content"></p>
             </li>
-          </ul> -->
+          </ul>
         </div>
         <div class="pubgroup">
           <div class="pubheader">Misc</div>
-          <div class="project-statement"></div>
+          <div class="project-statement">Grad school has been a mind-expanding ride. I got to work on some projects that do not fit into the my main research narrative, but they all relate to the investigation of "human data interfaces"---be it API design, ways tosearch with DNN generated labels, or how we update our beliefs based on visual data.</div>
           <ul>
             <li>
                 <a class="pubtitle" href="https://www.dropbox.com/s/yaie1a6aqdnxtij/plateau_yifanwu.pdf?dl=0">Is a Dataframe Just a Table</a>
@@ -118,7 +122,7 @@
           <span class="name">University of California, Berkeley</span>
           <span class="time">2015-present</span>
           <div class="role">PhD Candidate in Computer Science</div>
-          <div class="metadata">Advisor: Joeseph M. Hellerstein</div>
+          <div class="metadata">Advisor: Joe Hellerstein</div>
         </div>
 
         <div class="place">
@@ -234,8 +238,8 @@
       </div>
       <div class="row" id="future">
         <hr>
-        <h3>⭐ JOB/FUNDING SEEKING ⭐</h3>
-        <p>I plan to graduate <b>summer/fall 2020</b>, and I hope to continue building tools for data analysts.  These days, I am particularly interested in scaling analysis <i>teams</i>.  I think the <b>history</b> of the individual/organization's programming traces has huge potential to make analysis easier by allowing the tools to build custom on-the-fly <b>interactive visualizations/models</b> and <b>surfacing relevant information</b> synthesized from history.</p>
+        <h3>⭐ UP COMING ⭐</h3>
+        <p>I plan to graduate <b>fall 2020</b>, and I hope to continue building data tools.  I'm looking to explore projects to scaling <i>teams</i> working with data. The <b>history</b> of the individual/organization's programming and interaction traces has huge potential to make analysis easier by allowing the tools to build custom on-the-fly <b>interactive visualizations/models</b> and <b>surfacing relevant information</b> synthesized from history.</p>
       </div>
       <div class="row" id="summary">
         <hr>
@@ -244,7 +248,7 @@
         <p>The difficulty manifests on two different levels. First is the effort taken to "wire up" frontends with backends, which involves mundane and repetitive efforts like mapping application-level manipulations to query languages, as well as tough issues like coordinating concurrent and asynchronous events. Second is the more subtle effort to type the code---compared to direct manipulation techniques like brushing, coding is OOM slower and requires the analyst to context switch.</p>
         <p>In my Ph.D. I created two new projects.</p>
         <p>DIEL, a framework that helps developers build scalable interative data visualizations under a simple, declarative interface. DIEL treats UI events as a stream of data that is captured in an event history for reuse. Developers declare what the state of the interface should be after the arrival of events. DIEL compiles these declarative specifications into relational queries over both event history and the data to be visualized. In doing so, DIEL makes it easier to develop visualizations that are robust against changes to the size and location of data. To read more: <a href="https://arxiv.org/pdf/1907.00062.pdf">scaling</a>, <a href="https://arxiv.org/pdf/1806.01499.pdf">concurrency </a> and <a href="https://dl.acm.org/doi/10.1145/2939502.2939517">consistency</a>.</p>
-        <p>Midas builds on this duality of queries and interactions in DIEL. It is a notebook extension that creates interactive visualizations inferred from queries already written. The developer can move smoothly between the two mediums.</p>
+        <p>B2 builds on this duality of queries and interactions in DIEL. It is a notebook extension that creates interactive visualizations inferred from queries already written. We identified additional design gaps that prevents the developer can move smoothly between the two mediums---layout, temporal and semantic.  We address these gaps in a Jupyter Notebook extension, which tightens the feedback loop for programming with data. Check out our <a href="https://github.com/yifanwu/midas">code</a> and <a href="https://vimeo.com/430781306#t=15m0s">demo</a> (paper coming soon).</p>
       </div>
       <div class="row" id="references">
         <h3>References</h3>
@@ -256,7 +260,7 @@
       <div class="row personal">
         <hr>
         <h3>Personal</h3>
-        <p>I grew up in China (Taiyuan, Beijing) and the UK (Nottingham). I love good books (a big Woolf fan), conversations, and activities that help me move with intention (like rock climbing). After a stint with soylent and "rationality", I now spent a lot of my non-professional time cooking and being silly.</p>
+        <p>Before the US, I grew up in China (Taiyuan + Beijing) and the UK (Nottingham). I love good books (a big Woolf fan), conversations, and activities that help me move with intention (like rock climbing). After a stint with soylent and "rationality", I now spent a lot of my non-professional time cooking and being silly.</p>
       </div>
       <div class="row bottom" style="height: 50px;">
       </div>

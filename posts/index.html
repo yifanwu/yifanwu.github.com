@@ -32,6 +32,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega@5.9.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.2.0"></script>
+  <script src="./helper.js"></script>
   <script>
     document.querySelector(".post").onclick = function() {
       let file = this.getAttribute("data-md");
@@ -59,6 +60,9 @@
         document.querySelectorAll('pre code').forEach((block) => {
           hljs.highlightBlock(block);
         });
+        if (file === "writing") {
+          activateWriting();
+        }
         var f = visLookup[file];
         if (f) {
           f();
