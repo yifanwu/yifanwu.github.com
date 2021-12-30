@@ -25,6 +25,10 @@
   font-size: 1.2em;  
 } 
 
+.sec-header {
+  color:#9232d6c5
+}
+
 h3 {
   color: var(--blue-500);
 }
@@ -113,6 +117,12 @@ li {
   font-size: 1.2em;
   font-weight: 500;
   color: 222;
+}
+
+#statement {
+  margin-top: 12px;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .project-statement {
