@@ -1,3 +1,11 @@
 .DS_Store
 .idea
 .idea/*
+notes/_site
+notes/.sass-cache
+notes/.jekyll-cache
+notes/.jekyll-metadata
+notes/vendor
+favicon-old.ico
+index_2022.html
+index_old.html
